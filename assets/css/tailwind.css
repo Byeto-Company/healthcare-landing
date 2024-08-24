@@ -2,28 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --color-primary: 220 70% 60%;
-    --color-primary-100: 220 70% 95%;
-    --color-primary-200: 220 70% 85%;
-    --color-primary-300: 220 70% 75%;
-    --color-primary-400: 220 70% 65%;
-    --color-primary-500: 220 70% 55%;
-    --color-primary-600: 220 70% 45%;
-    --color-primary-700: 220 70% 35%;
-    --color-primary-800: 220 70% 25%;
-    --color-primary-900: 220 70% 15%;
-    --color-primary-950: 220 70% 5%;
+@layer base {
+    :root {
+        --color-primary: 220 70% 60%;
+        --color-primary-100: 220 70% 95%;
+        --color-primary-200: 220 70% 85%;
+        --color-primary-300: 220 70% 75%;
+        --color-primary-400: 220 70% 65%;
+        --color-primary-500: 220 70% 55%;
+        --color-primary-600: 220 70% 45%;
+        --color-primary-700: 220 70% 35%;
+        --color-primary-800: 220 70% 25%;
+        --color-primary-900: 220 70% 15%;
+        --color-primary-950: 220 70% 5%;
+    
+        --color-secondary: 179 79% 45%;
+        --color-secondary-100: 179 79% 95%;
+        --color-secondary-200: 179 79% 85%;
+        --color-secondary-300: 179 79% 75%;
+        --color-secondary-400: 179 79% 65%;
+        --color-secondary-500: 179 79% 55%;
+        --color-secondary-600: 179 79% 45%;
+        --color-secondary-700: 179 79% 35%;
+        --color-secondary-800: 179 79% 25%;
+        --color-secondary-900: 179 79% 15%;
+        --color-secondary-950: 179 79% 5%;
+    }
 
-    --color-secondary: 179 79% 45%;
-    --color-secondary-100: 179 79% 95%;
-    --color-secondary-200: 179 79% 85%;
-    --color-secondary-300: 179 79% 75%;
-    --color-secondary-400: 179 79% 65%;
-    --color-secondary-500: 179 79% 55%;
-    --color-secondary-600: 179 79% 45%;
-    --color-secondary-700: 179 79% 35%;
-    --color-secondary-800: 179 79% 25%;
-    --color-secondary-900: 179 79% 15%;
-    --color-secondary-950: 179 79% 5%;
+    .padding-main {
+        @apply px-5 lg:h-[5.25rem] lg:px-[1.075rem] xl:px-10
+    }
 }

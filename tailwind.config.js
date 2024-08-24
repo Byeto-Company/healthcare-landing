@@ -12,6 +12,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            container: {
+                center: true
+            },
             colors: {
                 primary: {
                     DEFAULT: "hsl(var(--color-primary) / <alpha-value>)",
@@ -39,6 +42,12 @@ module.exports = {
                     900: "hsl(var(--color-secondary-900) / <alpha-value>)",
                     950: "hsl(var(--color-secondary-950) / <alpha-value>)"
                 }
+            },
+            zIndex: {
+                'normal': 1,
+                'high': 2,
+                'higher': 3,
+                'highest': 4
             }
         }
     },
@@ -48,7 +57,18 @@ module.exports = {
                 ".text-gradient": {
                     "-webkit-background-clip": "text",
                     "-webkit-text-fill-color": "transparent"
-                }
+                },
+                ".flex-center": {
+                    display: 'flex',
+                    'justify-content': 'center',
+                    'align-items': 'center'
+                },
+                ".flex-col-center": {
+                    display: 'flex',
+                    'flex-direction': 'column',
+                    'justify-content': 'center',
+                    'align-items': 'center'
+                },
             });
         })
     ]

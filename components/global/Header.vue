@@ -3,7 +3,9 @@
 </script>
 
 <template>
-    <div>
+    <div class="container sticky top-0 z-50 w-full shadow-sm">
+        <div class="flex justify-between items-center h-[4.75rem] padding-main">
+        </div>
 
     </div>
 </template>
