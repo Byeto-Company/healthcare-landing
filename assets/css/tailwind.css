@@ -30,6 +30,14 @@
     }
 
     .padding-main {
-        @apply px-5 lg:h-[5.25rem] lg:px-[1.075rem] xl:px-10
+        @apply px-5 lg:h-[5.25rem] lg:px-[1.075rem] xl:px-10;
+    }
+
+    @font-face {
+        font-family: 'IRANYekanXVF';
+        src: url('/fonts/IranYekanX/IRANYekanXVF.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
     }
 }

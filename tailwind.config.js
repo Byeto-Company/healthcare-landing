@@ -15,6 +15,9 @@ module.exports = {
             container: {
                 center: true
             },
+            fontFamily: {
+                "iran-yekan-x": "IRANYekanXVF, sans-serif"
+            },
             colors: {
                 primary: {
                     DEFAULT: "hsl(var(--color-primary) / <alpha-value>)",
@@ -44,10 +47,10 @@ module.exports = {
                 }
             },
             zIndex: {
-                'normal': 1,
-                'high': 2,
-                'higher': 3,
-                'highest': 4
+                "normal": 1,
+                "high": 2,
+                "higher": 3,
+                "highest": 4
             }
         }
     },
@@ -59,16 +62,16 @@ module.exports = {
                     "-webkit-text-fill-color": "transparent"
                 },
                 ".flex-center": {
-                    display: 'flex',
-                    'justify-content': 'center',
-                    'align-items': 'center'
+                    display: "flex",
+                    "justify-content": "center",
+                    "align-items": "center"
                 },
                 ".flex-col-center": {
-                    display: 'flex',
-                    'flex-direction': 'column',
-                    'justify-content': 'center',
-                    'align-items': 'center'
-                },
+                    display: "flex",
+                    "flex-direction": "column",
+                    "justify-content": "center",
+                    "align-items": "center"
+                }
             });
         })
     ]
