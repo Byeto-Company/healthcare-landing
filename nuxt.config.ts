@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     devtools: { enabled: false },
     css: [
         "~/assets/css/tailwind.css",
-        "~assets/css/style.css"
+        "~/assets/css/style.css"
     ],
 
     postcss: {

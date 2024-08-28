@@ -1,9 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div>
-        <span>ewq</span>
-        <button></button>
+    <div class="paddin-main h-[100svh]">
     </div>
 </template>
 
