@@ -46,11 +46,12 @@ module.exports = {
                     950: "hsl(var(--color-secondary-950) / <alpha-value>)"
                 }
             },
-            zIndex: {
-                "normal": 1,
-                "high": 2,
-                "higher": 3,
-                "highest": 4
+            borderRadius: {
+                100: '10px',
+                150: '15px',
+                200: '20px',
+                250: '25px',
+                360: '999999999px',
             }
         }
     },
