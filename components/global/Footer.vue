@@ -7,13 +7,13 @@
     <div class="sticky top-0 z-50 w-full shadow-sm [background-image:_url('/pattern-hexagone.png')] [background-size:_100%] bg-gray-950">
         <div class="container w-full h-full gap-12 flex-col-center padding-main">
 
-            <div class="bg-primary w-[90%] -mt-24 px-[3.5rem] py-[3rem] flex items-center justify-between [background-image:_url('/pattern-curve.png')] [background-size:_100%] rounded-250">
+            <div class="bg-primary w-[90%] -mt-24 px-[3.5rem] py-[3rem] flex items-center justify-between [background-image:_url('/pattern-curve.png')] [background-size:_80%] rounded-250">
 
-                <div class="flex flex-col w-1/2 items-start gap-[2rem]">
+                <div class="flex flex-col w-1/2 items-start gap-[1.7rem]">
 
                     <span class="text-4xl text-white">با ما در ارتباط باشید...</span>
 
-                    <p class="text-white">در این قسمت با حوزه های فعالیت شرکت آشنا میشوید و شناختی کامل از تمامی خدمات شرکت و تیم قدرتمند ما پیدا میکنید</p>
+                    <p class="text-white leading-[2rem]">در این قسمت با حوزه های فعالیت شرکت آشنا میشوید و شناختی کامل از تمامی خدمات شرکت و تیم قدرتمند ما پیدا میکنید</p>
 
                 </div>
 
