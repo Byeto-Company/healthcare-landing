@@ -7,7 +7,7 @@
     <div class="sticky top-0 z-50 w-full shadow-sm [background-image:_url('/pattern-hexagone.png')] [background-size:_100%] bg-gray-950">
         <div class="container w-full h-full gap-12 flex-col-center padding-main">
 
-            <div class="bg-primary w-[90%] px-[3.5rem] py-[3rem] flex items-center justify-between [background-image:_url('/pattern-curve.png')] [background-size:_100%] rounded-250">
+            <div class="bg-primary w-[90%] -mt-24 px-[3.5rem] py-[3rem] flex items-center justify-between [background-image:_url('/pattern-curve.png')] [background-size:_100%] rounded-250">
 
                 <div class="flex flex-col w-1/2 items-start gap-[2rem]">
 
@@ -33,29 +33,29 @@
 
             <div class="flex-center w-[90%] pb-12 border-b border-gray-800">
 
-                <div class="flex flex-col gap-[2rem] w-1/2">
+                <div class="flex flex-col gap-[1.7rem] w-1/2">
 
                     <img src="/logo.png" class="w-[10rem]" alt="logo">
                     <div class="flex flex-col gap-2">
-                        <p class="text-sm text-white">
+                        <p class="text-sm text-gray-200">
                             شرکت فنی مهندسی خورشید رایانه طلوع
                         </p>
-                        <p class="text-sm text-white">
+                        <p class="text-sm text-gray-200">
                             آدرس : شیراز خیابان میزرای شیرازی کوچه 16 میلاد - پلاک 129
                         </p>
                     </div>
                     <div class="flex items-center gap-8">
 
-                        <NuxtLink class="text-white">
+                        <NuxtLink class="text-gray-200">
                             درباره ما
                         </NuxtLink>
-                        <NuxtLink class="text-white">
+                        <NuxtLink class="text-gray-200">
                             حوزه کاری
                         </NuxtLink>
-                        <NuxtLink class="text-white">
+                        <NuxtLink class="text-gray-200">
                             محصولات
                         </NuxtLink>
-                        <NuxtLink class="text-white">
+                        <NuxtLink class="text-gray-200">
                             ویژگی ها
                         </NuxtLink>
 
@@ -67,27 +67,30 @@
                     
                     <div class="flex flex-col items-start gap-[1rem]">
                         <span class="text-primary">ایمیل</span>
-                        <span class="text-white">ar.shekoohi@gmail.com</span>
-                        <span class="text-white">info@sunrisesys.ir</span>
+                        <span class="text-gray-300">ar.shekoohi@gmail.com</span>
+                        <span class="text-gray-300">info@sunrisesys.ir</span>
                     </div>
 
                     <div class="flex flex-col items-start gap-[1rem]">
                         <span class="text-primary">تلفن های تماس</span>
-                        <span style="direction: ltr !important;" class="text-white">+98 921 1997621</span>
-                        <span style="direction: ltr !important;" class="text-white">+98 917 8338212</span>
-                        <span style="direction: ltr !important;" class="text-white">+98 921 1997621</span>
-                        <span style="direction: ltr !important;" class="text-white">+98 917 8338212</span>
+                        <span style="direction: ltr !important;" class="text-gray-300">+98 921 1997621</span>
+                        <span style="direction: ltr !important;" class="text-gray-300">+98 917 8338212</span>
+                        <span style="direction: ltr !important;" class="text-gray-300">+98 921 1997621</span>
+                        <span style="direction: ltr !important;" class="text-gray-300">+98 917 8338212</span>
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="w-[90%] flex justify-between items-center py-4">
+            <div class="w-[90%] flex justify-between items-center pb-6 -mt-6">
                 <p class="text-gray-500">@2024 شرکت فنی مهندسی خورشید رایانه طلوع</p>
 
-                <div class="flex items-center gap-5">
-                    
+                <div class="flex items-center gap-7">
+                    <i class="text-2xl text-gray-500 fa-brands fa-whatsapp"></i>
+                    <i class="text-2xl text-gray-500 fa-brands fa-instagram"></i>
+                    <i class="text-2xl text-gray-500 fa-brands fa-telegram"></i>
+                    <i class="text-2xl text-gray-500 fa-brands fa-twitter"></i>
                 </div>
             </div>
 
