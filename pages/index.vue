@@ -2,6 +2,7 @@
 
 <template>
     <div class="paddin-main h-[100svh]">
+        <WorkCategories />
     </div>
 </template>
 
