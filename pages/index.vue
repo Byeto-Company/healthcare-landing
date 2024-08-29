@@ -3,7 +3,8 @@
 <template>
     <div class="w-full h-full flex flex-col items-center gap-[6.25rem]">
         <Hero />
-        <!-- <WorkCategories /> -->
+        <WorkCategories />
+        <Leaders />
     </div>
 </template>
 

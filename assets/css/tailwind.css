@@ -30,7 +30,7 @@
     }
 
     .padding-main {
-        @apply px-5 lg:h-[5.25rem] lg:px-[1.075rem] xl:px-10;
+        @apply px-5 lg:px-[1.075rem] xl:px-10;
     }
 
     @font-face {
