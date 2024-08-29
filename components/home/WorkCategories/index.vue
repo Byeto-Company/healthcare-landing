@@ -5,7 +5,7 @@
 <template>
     <section class="pb-80">
         <SectionTitle
-            title="مدیران تیم خورشید رایان طلوع"
+            title="حوزه کاری خورشید رایان طلوع"
             description="در این قسمت با حوزه های فعالیت شرکت آشنا میشوید و شناختی کامل از تمامی خدمات شرکت و تیم قدرتمند ما پیدا میکنید"
         />
         <div class="container padding-main flex justify-center gap-16 mt-28">
