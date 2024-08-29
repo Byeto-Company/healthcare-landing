@@ -35,7 +35,7 @@
 
                 <div class="flex flex-col gap-[1.7rem] w-1/2">
 
-                    <img src="/logo.png" class="w-[10rem]" alt="logo">
+                    <img src="/logo-row.png" class="w-[10rem]" alt="logo">
                     <div class="flex flex-col gap-2">
                         <p class="text-sm text-gray-200">
                             شرکت فنی مهندسی خورشید رایانه طلوع

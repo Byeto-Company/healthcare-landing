@@ -68,7 +68,7 @@
             </div>            
 
             <div class="w-1/12 flex-center">
-                <img src="/logo.png" class="object-fill" alt="logo">
+                <img src="/logo-row.png" class="object-fill" alt="logo">
             </div>
 
         </div>
