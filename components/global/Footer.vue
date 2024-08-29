@@ -7,11 +7,11 @@
     <div class="sticky top-0 z-50 w-full shadow-sm [background-image:_url('/pattern-hexagone.png')] [background-size:_100%] bg-gray-950">
         <div class="container w-full h-full gap-12 flex-col-center padding-main">
 
-            <div class="bg-primary w-[90%] -mt-24 px-[3.5rem] py-[3rem] flex items-center justify-between [background-image:_url('/pattern-curve.png')] [background-size:_80%] rounded-250">
+            <div class="bg-primary w-full -mt-24 px-[3.5rem] py-[3rem] flex items-center justify-between [background-image:_url('/pattern-curve.png')] [background-size:_80%] rounded-250">
 
                 <div class="flex flex-col w-1/2 items-start gap-[1.7rem]">
 
-                    <span class="text-4xl text-white">با ما در ارتباط باشید...</span>
+                    <span class="text-4xl text-white font-semibold">با ما در ارتباط باشید...</span>
 
                     <p class="text-white leading-[2rem]">در این قسمت با حوزه های فعالیت شرکت آشنا میشوید و شناختی کامل از تمامی خدمات شرکت و تیم قدرتمند ما پیدا میکنید</p>
 
@@ -31,7 +31,7 @@
 
             </div>
 
-            <div class="flex-center w-[90%] pb-12 border-b border-gray-800">
+            <div class="flex-center w-full pb-12 border-b border-gray-800">
 
                 <div class="flex flex-col gap-[1.7rem] w-1/2">
 
@@ -83,7 +83,7 @@
 
             </div>
 
-            <div class="w-[90%] flex justify-between items-center pb-6 -mt-6">
+            <div class="w-full flex justify-between items-center pb-6 -mt-6">
                 <p class="text-gray-500">@2024 شرکت فنی مهندسی خورشید رایانه طلوع</p>
 
                 <div class="flex items-center gap-7">
