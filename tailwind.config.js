@@ -13,7 +13,7 @@ module.exports = {
     theme: {
         extend: {
             container: {
-                center: true
+                center: true,
             },
             fontFamily: {
                 "iran-yekan-x": "IRANYekanXVF, sans-serif"
@@ -57,7 +57,9 @@ module.exports = {
                 360: '999999999px',
             },
             zIndex: {
-                'under' : -10,
+                'lowest' : -15,
+                'lower' : -10,
+                'low' : -5,
                 'normal' : 1,
                 'high' : 5,
                 'higher' : 10,

@@ -6,6 +6,6 @@
         <main class="container w-full pt-20 pb-24">
             <slot />
         </main>
-        <Footer />
+        <!-- <Footer /> -->
     </div>
 </template>
