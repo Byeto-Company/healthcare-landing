@@ -18,6 +18,9 @@ module.exports = {
             fontFamily: {
                 "iran-yekan-x": "IRANYekanXVF, sans-serif"
             },
+            boxShadow : {
+                "main" : "0px 0px 80px 1px"
+            },
             colors: {
                 primary: {
                     DEFAULT: "hsl(var(--color-primary) / <alpha-value>)",

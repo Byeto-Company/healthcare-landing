@@ -4,6 +4,7 @@
 
 @layer base {
     :root {
+
         --color-primary: 220 70% 60%;
         --color-primary-100: 220 70% 95%;
         --color-primary-200: 220 70% 85%;
