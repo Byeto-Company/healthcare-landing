@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     devtools: { enabled: false },
-
-    app: {
+    ssr: false,
+    app: {  
         head: {
             link: [
                 {
@@ -17,6 +17,13 @@ export default defineNuxtConfig({
     css: [
         "~/assets/css/tailwind.css",
         "~/assets/css/style.css"
+    ],
+
+    components: [
+        {
+            path: '~/components',
+            pathPrefix: false,
+        },
     ],
 
     postcss: {

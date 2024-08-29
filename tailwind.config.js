@@ -55,6 +55,14 @@ module.exports = {
                 200: '20px',
                 250: '25px',
                 360: '999999999px',
+            },
+            zIndex: {
+                'under' : -10,
+                'normal' : 1,
+                'high' : 5,
+                'higher' : 10,
+                'highest' : 15,
+
             }
         }
     },

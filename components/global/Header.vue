@@ -51,7 +51,7 @@
 
 <template>
     <div class="sticky top-0 z-50 w-full shadow-sm">
-        <div class="flex container justify-between items-center h-[4.75rem] padding-main">
+        <div class="flex container justify-between items-center h-[4.75rem] bg-white z-higher padding-main">
 
             <div class="flex items-center justify-start w-11/12 gap-[3rem]">
                 <NuxtLink 
