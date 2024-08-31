@@ -5,7 +5,7 @@
 type SectionTitleProps = {
     title: string;
     description?: string;
-    theme: 'light' | 'dark';
+    theme?: 'light' | 'dark';
 }
 
 withDefaults(defineProps<SectionTitleProps>(), {
