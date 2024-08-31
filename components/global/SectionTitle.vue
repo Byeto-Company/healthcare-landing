@@ -5,18 +5,21 @@
 type SectionTitleProps = {
     title: string;
     description?: string;
+    theme: 'light' | 'dark';
 }
 
-defineProps<SectionTitleProps>();
+withDefaults(defineProps<SectionTitleProps>(), {
+    theme: 'light'
+})
 
 </script>
 
 <template>
     <div class="flex flex-col items-center justify-center gap-4">
-        <h2 class="text-3xl font-semibold text-center text-black">
+        <h2 class="text-3xl font-semibold text-center" :class="theme == 'light' ? 'text-black' : 'text-white'">
             {{ title }}
         </h2>
-        <p class="text-lg text-gray-800 mt-2 text-center max-w-[700px]">
+        <p class="text-lg mt-2 text-center max-w-[700px]" :class="theme == 'light' ? 'text-gray-800' : 'text-gray-200'">
             {{ description }}
         </p>
     </div>

@@ -5,6 +5,7 @@
         <Hero />
         <WorkCategories />
         <Leaders />
+        <Confirmations />
     </div>
 </template>
 

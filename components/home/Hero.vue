@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="relative h-full padding-main flex-center w-[90%]">
+    <header class="relative h-full padding-main flex-center w-[90%] pt-8">
 
         <div class="flex flex-col items-start w-1/2 gap-10">
             <div class="flex flex-col">
@@ -67,7 +67,7 @@
         <div class="absolute -translate-y-1/2 pointer-events-none lg:block bg-radial-gradient z-lowest opacity-20 top-1/3 size-full" style="--color: hsl(179 79% 45%)"></div>
         <div class="absolute -translate-y-1/2 pointer-events-none lg:block bg-radial-gradient z-lowest opacity-20 top-2/3 size-full" style="--color: hsl(220 70% 60%)"></div>
 
-    </div>
+    </header>
 </template>
 
 <style scoped>
