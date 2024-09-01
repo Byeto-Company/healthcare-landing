@@ -15,11 +15,18 @@ module.exports = {
             container: {
                 center: true,
             },
+            fontWeight : {
+                "extrablack" : 950,
+                "heavy" : 1000,
+            },
             fontFamily: {
                 "iran-yekan-x": "IRANYekanXVF, sans-serif"
             },
             boxShadow : {
                 "main" : "0px 0px 80px 1px"
+            },
+            dropShadow : {
+                "main" : "0px 0px 80px hsl(var(--color-primary-200))"
             },
             colors: {
                 primary: {

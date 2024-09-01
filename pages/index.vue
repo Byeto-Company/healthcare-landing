@@ -6,6 +6,7 @@
         <WorkCategories />
         <Leaders />
         <Confirmations />
+        <StateMap />
         <Demo />
         <AboutUs />
     </div>
