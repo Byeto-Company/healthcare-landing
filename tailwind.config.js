@@ -15,6 +15,10 @@ module.exports = {
             container: {
                 center: true,
             },
+            fontWeight : {
+                "extrablack" : 950,
+                "heavy" : 1000,
+            },
             fontFamily: {
                 "iran-yekan-x": "IRANYekanXVF, sans-serif"
             },
