@@ -21,6 +21,9 @@ module.exports = {
             boxShadow : {
                 "main" : "0px 0px 80px 1px"
             },
+            dropShadow : {
+                "main" : "0px 0px 80px hsl(var(--color-primary-200))"
+            },
             colors: {
                 primary: {
                     DEFAULT: "hsl(var(--color-primary) / <alpha-value>)",
