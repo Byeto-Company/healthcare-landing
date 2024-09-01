@@ -65,7 +65,7 @@
             <span class="absolute top-0 w-[3px] rounded-full h-full -translate-x-1/2 bg-gray-800 left-1/2 z-high"></span>
             <span class="middle-line absolute top-0 w-[4px] rounded-full h-full -translate-x-1/2 bg-primary left-1/2 z-high"></span>
 
-            <div class="top-0 flex flex-col gap-10 py-24 mx-auto w-[80%] z-higher">
+            <div class="top-0 flex flex-col gap-10 py-24 mx-auto w-[90%] z-higher">
 
                 <ConfirmationRow 
                     v-for="(confirmation, index) in confirmations"
