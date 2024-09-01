@@ -24,23 +24,16 @@
 
     onMounted(() => {
 
-        let tl;
-
-        if(direction.value == 'left') {
-            tl = gsap.timeline()
-                .to(`.left-path-${index.value}`, {'clip-path': 'polygon(100% 0, 0 0, 0 100%, 100% 100%)'})
-                .to(`.left-dot-${index.value}`, {'background-color': '#5281e0'})
-        } else {
-            tl = gsap.timeline()
-                .to(`.right-path-${index.value}`, {'clip-path': 'polygon(100% 0, 0 0, 0 100%, 100% 100%)'})
-                .to(`.right-dot-${index.value}`, {'background-color': '#5281e0'})
-        }
+        let tl = gsap.timeline()
+                .to(`.path-${index.value}`, {'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'})
+                .to(`.dot-${index.value}`, {'background-color': '#5281e0'})
             
         ScrollTrigger.create({
             trigger: `#row-${index.value}`,
             animation: tl,
             start: 'top center',
             end: '50% center',
+            markers: true,
             scrub: true
         });
 
@@ -62,11 +55,11 @@
                     <path d="M194.574 68.445L141 68.4449L88.8897 3.12846L2.99999 3.12872" stroke="#3B3D41" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                <svg class="absolute" viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M194.574 68.445L141 68.4449L88.8897 3.12846L2.99999 3.12872" class="stroke-primary" :class="`left-path-${index}`" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" style="clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);"/>
+                <svg class="absolute" viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg" :class="`path-${index}`" style="clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);">
+                    <path d="M194.574 68.445L141 68.4449L88.8897 3.12846L2.99999 3.12872" class="stroke-primary" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                <span :class="`left-dot-${index}`" class="absolute -bottom-[40%] -right-[17%] p-2 shadow-lg size-10 z-normal flex-center rounded-360" style="background-color: #3B3D41">
+                <span :class="`dot-${index}`" class="absolute -bottom-[40%] -right-[15%] p-2 shadow-lg size-10 z-normal flex-center rounded-360" style="background-color: #3B3D41">
                     <span class="bg-white size-full rounded-360 z-[1]"></span>
                 </span>
 
@@ -78,15 +71,15 @@
 
             <div class="relative w-1/5 h-max" :class="direction == 'left' ? 'hidden' : 'flex-center'">
 
-                <svg viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 198 71" class="rotate-180" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.42628 68.445L57 68.4449L109.11 3.12846L195 3.12872" stroke="#3B3D41" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                <svg class="absolute" viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.42628 68.445L57 68.4449L109.11 3.12846L195 3.12872" stroke-width="7" class="stroke-primary" :class="`right-path-${index}`" stroke-linecap="round" stroke-linejoin="round" style="clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);"/>
+                <svg class="absolute rotate-180" viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg" :class="`path-${index}`" style="clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);">
+                    <path d="M3.42628 68.445L57 68.4449L109.11 3.12846L195 3.12872" stroke-width="7" class="stroke-primary" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                <span :class="`right-dot-${index}`" class="absolute -bottom-[40%] -left-[17%] p-2 shadow-lg size-10 z-normal flex-center rounded-360" style="background-color: #3B3D41">
+                <span :class="`dot-${index}`" class="absolute -bottom-[40%] -left-[15%] p-2 shadow-lg size-10 z-normal flex-center rounded-360" style="background-color: #3B3D41">
                     <span class="bg-white size-full rounded-360 z-[1]"></span>
                 </span>
 
