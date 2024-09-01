@@ -6,6 +6,8 @@
         <WorkCategories />
         <Leaders />
         <Confirmations />
+        <Demo />
+        <AboutUs />
     </div>
 </template>
 

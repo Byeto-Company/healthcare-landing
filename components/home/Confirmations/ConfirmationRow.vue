@@ -6,48 +6,92 @@
 
 // props
 
-    withDefaults(defineProps<Confirmation>(), {
+    type Props = {
+        index : number;
+    } & Confirmation;
+
+    const props = withDefaults(defineProps<Props>(), {
         direction: 'left'
+    })
+
+    const { direction, index } = toRefs(props)
+
+// state
+
+    const { $gsap: gsap, $ScrollTrigger: ScrollTrigger } = useNuxtApp()
+
+// life-cycle
+
+    onMounted(() => {
+
+        let tl;
+
+        if(direction.value == 'left') {
+            tl = gsap.timeline()
+                .to(`.left-path-${index.value}`, {'clip-path': 'polygon(100% 0, 0 0, 0 100%, 100% 100%)'})
+                .to(`.left-dot-${index.value}`, {'background-color': '#5281e0'})
+        } else {
+            tl = gsap.timeline()
+                .to(`.right-path-${index.value}`, {'clip-path': 'polygon(100% 0, 0 0, 0 100%, 100% 100%)'})
+                .to(`.right-dot-${index.value}`, {'background-color': '#5281e0'})
+        }
+            
+        ScrollTrigger.create({
+            trigger: `#row-${index.value}`,
+            animation: tl,
+            start: 'top center',
+            end: '50% center',
+            scrub: true
+        });
+
     })
     
 
 </script>
 
 <template>
-    <div class="flex items-center justify-between w-full" :class="direction == 'left' ? 'flex-row-reverse' : 'flex-row'">
+    <div :id="`row-${index}`" class="flex items-center justify-between w-full z-higher" :class="direction == 'left' ? 'flex-row-reverse' : 'flex-row'">
 
-        <div class="relative flex items-center w-1/2" :class="direction == 'left' ? 'justify-end' : 'justify-start'">
+        <div class="relative flex items-center w-1/2">
+            
+            <!-- left -->
+            
             <div class="relative w-1/5 h-max" :class="direction == 'right' ? 'hidden' : 'flex-center'">
             
                 <svg viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M194.574 68.445L141 68.4449L88.8897 3.12846L2.99999 3.12872" stroke="#3B3D41" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M194.574 68.445L141 68.4449L88.8897 3.12846L2.99999 3.12872" stroke="#3B3D41" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                <svg class="absolute w-full" viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M194.574 68.445L141 68.4449L88.8897 3.12846L2.99999 3.12872" class="stroke-primary" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg class="absolute" viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M194.574 68.445L141 68.4449L88.8897 3.12846L2.99999 3.12872" class="stroke-primary" :class="`left-path-${index}`" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" style="clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);"/>
                 </svg>
 
-                <span class="absolute -bottom-[40%] -right-[17%] p-2 shadow-lg size-10 z-normal bg-primary flex-center rounded-360">
+                <span :class="`left-dot-${index}`" class="absolute -bottom-[40%] -right-[17%] p-2 shadow-lg size-10 z-normal flex-center rounded-360" style="background-color: #3B3D41">
                     <span class="bg-white size-full rounded-360 z-[1]"></span>
                 </span>
 
             </div>
+
             <img :src="image" class="w-4/5 rounded-150 image-shadow" alt="confirmation-1">
+
+            <!-- right -->
+
             <div class="relative w-1/5 h-max" :class="direction == 'left' ? 'hidden' : 'flex-center'">
 
                 <svg viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.42628 68.445L57 68.4449L109.11 3.12846L195 3.12872" stroke="#3B3D41" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.42628 68.445L57 68.4449L109.11 3.12846L195 3.12872" stroke="#3B3D41" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                <svg class="absolute w-full" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);" viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.42628 68.445L57 68.4449L109.11 3.12846L195 3.12872" class="stroke-primary" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg class="absolute" viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.42628 68.445L57 68.4449L109.11 3.12846L195 3.12872" stroke-width="7" class="stroke-primary" :class="`right-path-${index}`" stroke-linecap="round" stroke-linejoin="round" style="clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);"/>
                 </svg>
 
-                <span class="absolute -bottom-[40%] -left-[17%] p-2 shadow-lg size-10 z-normal bg-primary flex-center rounded-360">
+                <span :class="`right-dot-${index}`" class="absolute -bottom-[40%] -left-[17%] p-2 shadow-lg size-10 z-normal flex-center rounded-360" style="background-color: #3B3D41">
                     <span class="bg-white size-full rounded-360 z-[1]"></span>
                 </span>
 
             </div>
+            
         </div>
 
         <span class="flex items-center w-1/2 text-3xl font-semibold text-white" :class="direction == 'left' ? 'justify-start' : 'justify-end'">
