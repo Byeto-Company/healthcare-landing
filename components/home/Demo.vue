@@ -1,5 +1,17 @@
 <script setup lang="ts">
 
+// types
+
+    type requestDataInfoType = {
+        name: string
+    }
+
+// state
+
+    const requestDataInfo = ref<requestDataInfoType>({
+        name: ''
+    })
+
 </script>
 
 <template>
@@ -21,7 +33,7 @@
 
         </div>
 
-        <div class="flex flex-col items-center w-full">
+        <div class="flex flex-col items-center w-full pb-[4.25rem]">
 
             <SectionTitle
                 title="فرم ثبت درخواست دمو پروژه"
@@ -29,14 +41,63 @@
                 theme="dark"
             />
 
-            <div class="w-[90%] grid grid-cols-2">
+            <form class="w-[90%] grid grid-cols-2 gap-10 mt-20">
 
-                <div class="flex flex-col gap-1">
-                    <label for="name">نام و نام خوانوگی</label>
-                    <input type="text" id="name" class="w-full h-12 bg- border bg-[#19191A] outline-none focus:border-primary-100 rounded-150 focus:bg-[#25272A]">
-                </div>
+                <FormInput 
+                    v-model="requestDataInfo.name"
+                    label="نام"
+                    theme="dark"
+                    id="name"
+                />
 
-            </div>
+                <FormInput 
+                    v-model="requestDataInfo.name"
+                    label="نام خانوادگی"
+                    theme="dark"
+                    id="name"
+                />
+                
+                <FormInput 
+                    v-model="requestDataInfo.name"
+                    label="ایمیل"
+                    theme="dark"
+                    id="name"
+                />
+
+                <FormInput 
+                    v-model="requestDataInfo.name"
+                    label="شماره تلفن"
+                    theme="dark"
+                    id="name"
+                />
+
+                <FormInput 
+                    v-model="requestDataInfo.name"
+                    label="نام مرکز"
+                    theme="dark"
+                    id="name"
+                />
+
+                <FormInput 
+                    v-model="requestDataInfo.name"
+                    label="ماژول"
+                    theme="dark"
+                    id="name"
+                />
+                
+                <FormTextarea
+                    class="col-span-full"
+                    v-model="requestDataInfo.name"
+                    label="ماژول"
+                    theme="dark"
+                    id="name"
+                />
+
+                <button class="py-3 text-white transition-all hover:brightness-125 col-span-full bg-primary rounded-360">
+                    ثبت درخواست
+                </button>
+
+            </form>
 
         </div>
 
