@@ -38,10 +38,10 @@
         <input 
             @change="$emit('update:modelValue', $event.target.value)" 
             :id="id" 
-            class="w-full h-12 border px-4 bg-[#19191A] outline-none border-gray-600 focus:border-primary transition-all focus:ring-2 focus:ring-offset-2 focus:ring-primary rounded-100 focus:bg-[#25272A]"
+            class="w-full h-12 border px-4 outline-none  focus:border-primary transition-all focus:ring-2 focus:ring-offset-2 focus:ring-primary rounded-100 focus:bg-[#25272A]"
             :class="{
-                'ring-offset-[#19191A] text-white' : theme == 'dark',
-                'ring-offset-white text-black' : theme == 'light'
+                'ring-offset-[#19191A] text-white bg-[#19191A] border-gray-600' : theme == 'dark',
+                'ring-offset-white text-black bg-white border-gray-300' : theme == 'light'
             }"    
         >
     </div>

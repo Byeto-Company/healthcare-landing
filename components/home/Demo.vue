@@ -41,7 +41,7 @@
                 theme="dark"
             />
 
-            <form class="w-[90%] grid grid-cols-2 gap-10 mt-20">
+            <form class="w-[70%] grid grid-cols-2 gap-10 mt-20">
 
                 <FormInput 
                     v-model="requestDataInfo.name"

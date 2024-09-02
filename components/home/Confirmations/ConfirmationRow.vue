@@ -25,8 +25,8 @@
     onMounted(() => {
 
         let tl = gsap.timeline()
-                .to(`.path-${index.value}`, {'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'})
-                .to(`.dot-${index.value}`, {'background-color': '#5281e0'})
+            .to(`.path-${index.value}`, {'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'})
+            .to(`.dot-${index.value}`, {'background-color': '#5281e0'})
             
         ScrollTrigger.create({
             trigger: `#row-${index.value}`,
