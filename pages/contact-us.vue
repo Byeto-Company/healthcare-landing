@@ -66,8 +66,8 @@
                 />
 
                 <div class="flex items-center justify-start col-span-full">
-                    <div class="flex items-center mb-4">
-                        <input id="rule-checkbox" type="checkbox" class="bg-red-700 border-gray-300 rounded size-4 text-primary focus:ring-primary">
+                    <div class="flex items-center">
+                        <input id="rule-checkbox" type="checkbox" class="bg-white border-gray-300 rounded size-4 text-primary focus:ring-primary">
                         <label for="rule-checkbox" class="text-sm font-medium text-black select-none ms-2">قوانین و مقررات را قبول دارم</label>
                     </div>
                 </div>

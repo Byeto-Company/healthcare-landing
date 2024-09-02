@@ -3,6 +3,7 @@ const plugin = require("tailwindcss/plugin");
 /** @type {import("tailwindcss").Config} */
 module.exports = {
     content: [
+        "./node_modules/flowbite/**/*.js",
         "./components/**/*.{js,vue,ts}",
         "./layouts/**/*.vue",
         "./pages/**/*.vue",
@@ -76,6 +77,7 @@ module.exports = {
         }
     },
     plugins: [
+        require('flowbite/plugin'),
         plugin(function({ addUtilities }) {
             addUtilities({
                 ".text-gradient": {
