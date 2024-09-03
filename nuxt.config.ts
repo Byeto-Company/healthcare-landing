@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     devtools: { enabled: false },
     ssr: false,
-    app: {  
+    app: {
         head: {
             link: [
                 {
@@ -31,6 +31,12 @@ export default defineNuxtConfig({
             tailwindcss: {},
             autoprefixer: {},
         },
+    },
+
+    runtimeConfig: {
+        public: {
+            API_BASE_URL: process.env.BASE_URL
+        }
     },
 
     compatibilityDate: "2024-08-24",
