@@ -33,7 +33,6 @@
             animation: tl,
             start: 'top center',
             end: '50% center',
-            markers: true,
             scrub: true
         });
 
