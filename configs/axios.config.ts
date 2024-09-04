@@ -1,26 +1,9 @@
-import axios, { AxiosError, type AxiosResponse } from "axios";
-import { useRouter } from "vue-router";
+import axiosOriginal, { AxiosError, type AxiosResponse } from "axios";
 
-const config = useRuntimeConfig()
-const router = useRouter()
-
-const axiosInstance = axios.create({
+const axios = axiosOriginal.create({
     baseURL: 'https://health.liara.run',
     timeout: 20000,
-    timeoutErrorMessage: 'خطای سرور',
-    headers: {
-        'Content-Type': 'application/json'
-    }
 });
 
-export const handleResponseError = async (cb: Promise<AxiosResponse>) => {
-    try {
-        return cb;
-    } catch (error) {
-        const err = error as AxiosError;
-        return err.response?.data;
-    }
-}
-
-export default axiosInstance
+export default axios
 

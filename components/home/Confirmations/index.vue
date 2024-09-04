@@ -50,7 +50,7 @@
 </script>
 
 <template>
-    <section id="confirmations" class="w-full flex flex-col items-center [background-image:_url('/pattern-hexagone.png')] [background-size:_100%] py-[6.25rem]">
+    <section id="confirmations" class="w-full flex flex-col items-center bg-pattern-hex py-[6.25rem]">
         <SectionTitle
             title="تائیدنامه ها"
             description="رضایت ها ناشی از تلاش بی وقفه ماست"

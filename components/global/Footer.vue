@@ -4,7 +4,7 @@
 
 <template>
 
-    <div class="z-higher w-full mt-24 shadow-sm [background-image:_url('/pattern-hexagone.png')] [background-size:_100%] bg-gray-950">
+    <div class="z-higher w-full mt-24 shadow-sm bg-pattern-hex bg-gray-950">
         <div class="container w-full h-full gap-12 flex-col-center padding-main">
 
             <div class="bg-primary w-full -mt-24 px-[3.5rem] py-[3rem] flex items-center justify-between [background-image:_url('/pattern-curve.png')] [background-size:_80%] rounded-250">

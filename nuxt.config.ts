@@ -1,14 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     devtools: { enabled: false },
-    ssr: false,
+    ssr: true,
     app: {
         head: {
             link: [
                 {
                     rel: "stylesheet",
                     type: "text/css",
-                    href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'
+                    href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                 }
             ]
         }
@@ -33,11 +33,7 @@ export default defineNuxtConfig({
         },
     },
 
-    runtimeConfig: {
-        public: {
-            API_BASE_URL: process.env.BASE_URL
-        }
-    },
-
     compatibilityDate: "2024-08-24",
+
+    plugins: ['~/plugins/tanstack.ts'],
 });
