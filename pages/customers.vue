@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useGetCustomers } from '~/composables/api/customers/useGetCustomers';
+
+const { $queryClient: queryClient }: any = useNuxtApp()
 
 // types
 
@@ -11,38 +14,13 @@
 
 // state
 
-    const customers = ref<Customer[]>([
-        {
-            name: 'بیمارستان حکیمی',
-            date: '1399/01/18',
-            appName: 'نرم افزار مدیریت بیماران',
-            address: 'فارس - شیراز'
-        },
-        {
-            name: 'بیمارستان حکیمی',
-            date: '1399/01/18',
-            appName: 'نرم افزار مدیریت بیماران',
-            address: 'فارس - شیراز'
-        },
-        {
-            name: 'بیمارستان حکیمی',
-            date: '1399/01/18',
-            appName: 'نرم افزار مدیریت بیماران',
-            address: 'فارس - شیراز'
-        },
-        {
-            name: 'بیمارستان حکیمی',
-            date: '1399/01/18',
-            appName: 'نرم افزار مدیریت بیماران',
-            address: 'فارس - شیراز'
-        },
-        {
-            name: 'بیمارستان حکیمی',
-            date: '1399/01/18',
-            appName: 'نرم افزار مدیریت بیماران',
-            address: 'فارس - شیراز'
-        },
-    ])
+    const { data: customers, suspense } = useGetCustomers()
+
+    onServerPrefetch(async () => {
+        await queryClient.prefetchQuery({
+            queryKey: ['customers']
+        })
+    })
 
 </script>
 

@@ -33,4 +33,10 @@ export default defineNuxtPlugin((nuxt) => {
             hydrate(queryClient, vueQueryState.value)
         })
     }
+
+    return {
+        provide: {
+            queryClient
+        }
+    }
 })
