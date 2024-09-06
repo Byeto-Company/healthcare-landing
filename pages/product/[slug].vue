@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <section class="w-full h-full flex flex-col items-center gap-[6.25rem] min-h-[100svh]">
+    <section class="w-full h-full flex flex-col items-center gap-[4.25rem] min-h-[100svh]">
         
         <div class="w-full -mt-10 padding-main flex-center">
             <div class="w-full h-[20rem] flex flex-col justify-center gap-10 bg-black rounded-150">
@@ -45,67 +45,95 @@
 
             <!-- content -->
 
-            <article class="w-9/12">
+            <article class="flex flex-col w-9/12 gap-16">
                 
-                <img src="/product-image.png" alt="product-1">
+                <section class="flex flex-col gap-4">
 
-                
+                    <NuxtImg 
+                        src="/product-image.png" 
+                        alt="product-1"
+                        densities="x1 x2"
+                    />
+
+                    <p class="text-black leading-[2rem]">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                    </p>
+                    
+                </section>
+
+                <section class="flex flex-col gap-4">
+                    
+                    <div class="w-full px-6 py-5 bg-white [box-shadow:_0px_0px_10px_#00000020] rounded-100">
+                        <span class="font-bold text-gradient bg-gradient-to-r from-secondary to-primary">
+                            ویژگی های سیستم جامع مدیریت اطلاعات تصویربرداری
+                        </span>
+                    </div>
+
+                    <div class="flex flex-col gap-3.5 mt-1 pr-5">
+
+                        <div class="flex items-start gap-2">
+                            <span class="mt-3 size-2 rounded-360 bg-gradient-to-b from-secondary to-primary shrink-0"></span>
+                            <p class="text-gray-500 leading-[2rem] text-sm">عدم پیچیدگی فرمها در طراحی نرم افزار و راحتی بكارگیری سیستم</p>
+                        </div>
+
+                        <div class="flex items-start gap-2">
+                            <span class="mt-3 size-2 rounded-360 bg-gradient-to-b from-secondary to-primary shrink-0"></span>
+                            <p class="text-gray-500 leading-[2rem] text-sm">امكان كنترل هوشمند دفترچه بیمه بیمار با مراجعات قبلی وی</p>
+                        </div>
+
+                        <div class="flex items-start gap-2">
+                            <span class="mt-3 size-2 rounded-360 bg-gradient-to-b from-secondary to-primary shrink-0"></span>
+                            <p class="text-gray-500 leading-[2rem] text-sm">قابلیت لینك به سیستم بیمارستانی در مراكز تصویربرداری بیمارستانی جهت دریافت الكترونیكی درخواست ، پذیرش خودكار ، جوابدهی online و استعلام زمان ترخیص و ویرایش خودكار پرونده همزمان با ویرایش بیمه در ترخیص بیمارستان</p>
+                        </div>
+
+                        <div class="flex items-start gap-2">
+                            <span class="mt-3 size-2 rounded-360 bg-gradient-to-b from-secondary to-primary shrink-0"></span>
+                            <p class="text-gray-500 leading-[2rem] text-sm">عدم پیچیدگی فرمها در طراحی نرم افزار و راحتی بكارگیری سیستم</p>
+                        </div>
+                        
+
+                    </div>
+
+                </section>
+
+                <section class="flex flex-col gap-4">
+                    
+                    <div class="w-full px-6 py-5 bg-white [box-shadow:_0px_0px_10px_#00000020] rounded-100">
+                        <span class="font-bold text-gradient bg-gradient-to-r from-secondary to-primary">
+                            قابلیت های سیستم جامع
+                        </span>
+                    </div>
+
+                    <div class="flex flex-col gap-8 pr-5 mt-1">
+
+                        <span v-for="i in 4" :key="i" class="flex items-center gap-2.5">
+                            <NuxtImg 
+                                src="/check.svg"
+                                class="shrink-0 size-9"
+                            />
+                            <span class="text-sm font-medium text-gray-500">
+                                قابلیت های سیستم جامع
+                            </span>
+                        </span>
+
+
+                    </div>
+
+                </section>
+
+                <p class="text-black leading-[2rem]">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
 
             </article>
 
             <!-- aside -->
 
-            <aside class="flex flex-col w-3/12 p-6 h-max rounded-200 border-gray-50">
+            <aside class="flex flex-col w-3/12 p-6 border-2 border-gray-200 h-max rounded-150">
                 
-<div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
-  <h2 id="accordion-flush-heading-1">
-    <button type="button" class="flex items-center justify-between w-full gap-3 py-5 font-medium text-gray-500 border-b border-gray-200 rtl:text-right dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
-      <span>What is Flowbite?</span>
-      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-      </svg>
-    </button>
-  </h2>
-  <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
-    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
-    </div>
-  </div>
-  <h2 id="accordion-flush-heading-2">
-    <button type="button" class="flex items-center justify-between w-full gap-3 py-5 font-medium text-gray-500 border-b border-gray-200 rtl:text-right dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
-      <span>Is there a Figma file available?</span>
-      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-      </svg>
-    </button>
-  </h2>
-  <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-    </div>
-  </div>
-  <h2 id="accordion-flush-heading-3">
-    <button type="button" class="flex items-center justify-between w-full gap-3 py-5 font-medium text-gray-500 border-b border-gray-200 rtl:text-right dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
-      <span>What are the differences between Flowbite and Tailwind UI?</span>
-      <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-      </svg>
-    </button>
-  </h2>
-  <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-    <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-      <ul class="text-gray-500 list-disc ps-5 dark:text-gray-400">
-        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+                <div class="text-gray-900 bg-white dark:bg-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
+                    
+                </div>
 
             </aside>
 

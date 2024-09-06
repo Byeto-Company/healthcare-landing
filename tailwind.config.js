@@ -3,7 +3,7 @@ const plugin = require("tailwindcss/plugin");
 /** @type {import("tailwindcss").Config} */
 module.exports = {
     content: [
-        "./node_modules/flowbite/**/*.js",
+        "./node_modules/flowbite/**/*.{js,ts}",
         "./components/**/*.{js,vue,ts}",
         "./layouts/**/*.vue",
         "./pages/**/*.vue",
