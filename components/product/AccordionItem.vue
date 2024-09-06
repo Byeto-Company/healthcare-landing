@@ -4,7 +4,10 @@
 
     type Props = {
         title: string,
-        isActive: boolean,
+        index: number,
+        id: string
+        count: number,
+        currentAccordionId: string | null,
         items: [
             {
                 title: string,
@@ -15,27 +18,32 @@
 
 // emit
 
-    defineEmits(['update:isActive'])
+    defineEmits(['update:currentAccordionId'])
 
 // props
     
-    defineProps<Props>()
+    const props = defineProps<Props>()
 
+    const { currentAccordionId, id } = toRefs(props)
+
+// computed
+
+    const isActive = computed(() => currentAccordionId.value == id.value)
 
 </script>
 
 <template>
     <div>
         <button 
-            @click="$emit('update:isActive', isActive ? false : true)"
+            @click="$emit('update:currentAccordionId', isActive ? null : id)"
             type="button"
-            :class="isActive ? '' : 'border-b border-gray-200'"
-            class="flex items-center justify-between w-full gap-3 py-3 font-medium text-gray-500"
+            :class="index != 1 ? 'border-t border-gray-200' : ''"
+            class="flex items-center justify-between w-full gap-3 py-4 font-medium text-gray-500"
         >
             <span>{{ title }}</span>
-            <i class="text-sm fa-solid fa-chevron-up"></i>
+            <i class="text-sm transition-all fa-solid fa-chevron-down" :class="isActive ? 'rotate-180' : ''"></i>
         </button>
-        <div :class="isActive ? 'border-b border-gray-200' : 'hidden'" class="flex flex-col gap-4">
+        <div :class="isActive ? 'pb-4' : 'hidden'" class="flex flex-col gap-4 h-max">
             <NuxtLink 
                 v-for="(link, index) in items" 
                 :key="index"

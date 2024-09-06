@@ -1,9 +1,43 @@
-<script setup>
+<script setup lang="ts">
     
 // state
 
     const route = useRoute()
-    
+
+    const currentAccordionId = ref<string | null>('test-1')
+    const accordions = ref<any>([
+        {
+            title: 'تست',
+            items: [
+                {
+                    title: 'تست',
+                    path: '/test'
+                }
+            ]
+        },
+        {
+            title: 'تست',
+            items: [
+                {
+                    title: '2تست',
+                    path: '/test2'
+                }
+            ]
+        },
+        {
+            title: 'تست',
+            items: [
+                {
+                    title: 'تست',
+                    path: '/test3'
+                },
+                {
+                    title: 'تست',
+                    path: '/test2'
+                },
+            ]
+        },
+    ])
 
 </script>
 
@@ -129,11 +163,18 @@
 
             <!-- aside -->
 
-            <aside class="flex flex-col w-3/12 p-6 border-2 border-gray-200 h-max rounded-150">
+            <aside class="flex flex-col w-3/12 px-6 py-2 border-2 border-gray-200 h-max rounded-150">
                 
-                <div class="text-gray-900 bg-white dark:bg-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
-                    
-                </div>
+                <AccordionItem
+                    v-for="(item, index) in accordions"
+                    :key="index"
+                    :index="index + 1"
+                    :title="item.title"
+                    :id="`test-${index + 1}`"
+                    :count="accordions.length"
+                    v-model:currentAccordionId="currentAccordionId"
+                    :items="item.items"
+                />
 
             </aside>
 
