@@ -1,24 +1,45 @@
-import { useQuery } from "@tanstack/vue-query"
-import { API_ENDPOINTS } from "~/constants"
+import { useInfiniteQuery, useQuery } from "@tanstack/vue-query";
+import axios from "~/configs/axios.config";
+import { API_ENDPOINTS, QUERY_KEYS } from "~/constants";
 
-// methods
+export type GetCustomersResponse = ApiPaginated<Customer>;
 
+export const handleGetCustomers = async ({ offset, limit }: typeof initialPageParam) => {
+    const { data } = await axios.get<GetCustomersResponse>(API_ENDPOINTS.customer.getAll, {
+        params: {
+            offset,
+            limit
+        }
+    });
 
-export const useGetCustomers = () => {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    const { $queryClient: queryClient, $axios: axios } = useNuxtApp()
+    return data;
+};
 
-    const handleGetCustomers = async () => {
-        const { data } = await axios.get(API_ENDPOINTS.customer.getAll)
-        return data
-    }
+export const initialPageParam = {
+    limit: 10,
+    offset: 0
+};
 
-    return useQuery({
-        queryKey: ['customers'],
-        queryFn: () => handleGetCustomers()
-    })
-}
+const useGetCustomers = () => {
+    return useInfiniteQuery({
+        queryKey: [QUERY_KEYS.customers],
+        queryFn: ({ pageParam }) => handleGetCustomers(pageParam),
+        initialPageParam,
+        getNextPageParam: (lastPage, pages) => {
+            const page = pages.length + 1;
 
+            const limit = initialPageParam.limit;
 
+            const nextPageParams = {
+                offset: page * limit - limit,
+                limit
+            };
 
+            return lastPage?.next ? nextPageParams : undefined;
+        }
+    });
+};
 
+export default useGetCustomers;

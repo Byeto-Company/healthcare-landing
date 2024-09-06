@@ -17,7 +17,7 @@
 <template>
     <section class="flex flex-col items-center w-full bg-[#19191A]">
 
-        <div class="w-full [background-image:_url('/pattern-hexagone.png')] py-[4.25rem] [background-size:_100%] [mask:_linear-gradient(180deg,_white_0%,_white_80%,_transparent_100%)]">
+        <div class="w-full bg-pattern-hex py-[4.25rem] [mask:_linear-gradient(180deg,_white_0%,_white_80%,_transparent_100%)]">
 
             <div class="w-[90%] flex items-center">
                 <div class="w-1/2 flex-center">

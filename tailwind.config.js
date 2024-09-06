@@ -14,20 +14,23 @@ module.exports = {
     theme: {
         extend: {
             container: {
-                center: true,
+                center: true
             },
-            fontWeight : {
-                "extrablack" : 950,
-                "heavy" : 1000,
+            fontWeight: {
+                "extrablack": 950,
+                "heavy": 1000
             },
             fontFamily: {
                 "iran-yekan-x": "IRANYekanXVF, sans-serif"
             },
-            boxShadow : {
-                "main" : "0px 0px 80px 1px"
+            boxShadow: {
+                "main": "0px 0px 80px 1px"
             },
-            dropShadow : {
-                "main" : "0px 0px 80px hsl(var(--color-primary-200))"
+            dropShadow: {
+                "main": "0px 0px 80px hsl(var(--color-primary-200))"
+            },
+            backgroundImage: {
+                "pattern-hex": "url('/pattern-hex.jpg')"
             },
             colors: {
                 primary: {
@@ -58,28 +61,43 @@ module.exports = {
                 }
             },
             borderRadius: {
-                100: '10px',
-                150: '15px',
-                200: '20px',
-                250: '25px',
-                360: '999999999px',
+                100: "10px",
+                150: "15px",
+                200: "20px",
+                250: "25px",
+                360: "999999999px"
             },
             zIndex: {
-                'lowest' : -15,
-                'lower' : -10,
-                'low' : -5,
-                'normal' : 1,
-                'high' : 5,
-                'higher' : 10,
-                'highest' : 15,
+                "lowest": -15,
+                "lower": -10,
+                "low": -5,
+                "normal": 1,
+                "high": 5,
+                "higher": 10,
+                "highest": 15
 
             }
         }
     },
     plugins: [
-        require('flowbite/plugin'),
+        require("flowbite/plugin"),
         plugin(function({ addUtilities }) {
             addUtilities({
+                ".click-effect": {
+                    "&:active": {
+                        "transform": "scale(0.9)"
+                    }
+                },
+                ".hover-effect": {
+                    "&:hover": {
+                        "filter": "brightness(125%)"
+                    }
+                },
+                ".persian-number": {
+                    "-moz-font-feature-settings": "'ss02'",
+                    "-webkit-font-feature-settings": "'ss02'",
+                    "font-feature-settings": "'ss02'"
+                },
                 ".text-gradient": {
                     "-webkit-background-clip": "text",
                     "-webkit-text-fill-color": "transparent"
