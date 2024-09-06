@@ -36,10 +36,5 @@ export default defineNuxtPlugin((nuxt) => {
         provide: {
             queryClient
         }
-<<<<<<< HEAD
-    }
-})
-=======
     };
 });
->>>>>>> 30eb1f73a9a0d12751ed79afda47cda7e3be0207

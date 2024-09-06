@@ -9,7 +9,7 @@ import useGetCustomers from "~/composables/api/customers/useGetCustomers";
 const { data: customers } = useGetCustomers();
 
 const customersList = computed(() => {
-    return customers.value?.pages.flatMap(i => i.results).flat();
+    return customers.value?.pages.map(i => i.results).flat();
 });
 
 </script>

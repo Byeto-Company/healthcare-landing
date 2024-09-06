@@ -1,8 +1,21 @@
-import { useInfiniteQuery, useQuery } from "@tanstack/vue-query";
+// imports
+
+import { useInfiniteQuery } from "@tanstack/vue-query";
 import axios from "~/configs/axios.config";
 import { API_ENDPOINTS, QUERY_KEYS } from "~/constants";
 
+// types
+
 export type GetCustomersResponse = ApiPaginated<Customer>;
+
+// state
+
+export const initialPageParam = {
+    limit: 10,
+    offset: 0
+};
+
+// methods
 
 export const handleGetCustomers = async ({ offset, limit }: typeof initialPageParam) => {
     const { data } = await axios.get<GetCustomersResponse>(API_ENDPOINTS.customer.getAll, {
@@ -11,16 +24,10 @@ export const handleGetCustomers = async ({ offset, limit }: typeof initialPagePa
             limit
         }
     });
-
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
     return data;
 };
 
-export const initialPageParam = {
-    limit: 10,
-    offset: 0
-};
+// composable
 
 const useGetCustomers = () => {
     return useInfiniteQuery({
