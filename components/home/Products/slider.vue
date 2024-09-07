@@ -40,7 +40,7 @@ const onSlideChange = () => {
 
 <template>
     <div class="flex flex-col items-center justify-center gap-8 mt-16">
-        <div class="w-[1000px] flex items-center gap-10">
+        <div class="flex items-center w-2/3 gap-10">
             <button
                 :disabled="swiperInstance?.isBeginning"
                 :class="{'!grayscale' : swiperInstance?.isBeginning}"
@@ -60,7 +60,7 @@ const onSlideChange = () => {
             >
                 <SwiperSlide v-for="slide in activeItem?.slides" :key="slide.id">
                     <div
-                        class="relative flex items-center justify-center w-full overflow-hidden bg-red-500 aspect-video rounded-150">
+                        class="relative flex items-center justify-center w-full overflow-hidden aspect-video rounded-150">
                         <img class="absolute object-cover w-full h-full" :src="slide.image" :alt="slide.description" />
                     </div>
                 </SwiperSlide>
