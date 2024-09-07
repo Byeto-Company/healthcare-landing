@@ -184,12 +184,12 @@ const pathMouseOver = (e: MouseEvent, id: number) => {
 </script>
 
 <template>
-    <section class="flex justify-center items-center gap-24">
-        <div class="flex flex-col gap-6 max-w-[450px]">
-            <div class="text-3xl font-semibold text-black">پوشش دهی بیش از</div>
-            <div class="text-6xl font-black bg-gradient-to-l text-gradient from-primary to-secondary">۱۵۰ مرکز درمانی</div>
-            <div class="text-3xl font-semibold text-black">در سراسر کشور</div>
-            <p class="text-justify text-lg leading-[170%] text-gray-800">
+    <section class="flex justify-center items-center gap-20 lg:gap-10 min-[1200px]:gap-24 max-lg:flex-wrap">
+        <div class="flex flex-col gap-6 max-w-[450px] max-lg:items-center">
+            <div class="text-2xl md:text-3xl font-semibold text-black">پوشش دهی بیش از</div>
+            <div class="text-5xl md:text-6xl font-black bg-gradient-to-l text-gradient from-primary to-secondary">۱۵۰ مرکز درمانی</div>
+            <div class="text-2xl md:text-3xl font-semibold text-black">در سراسر کشور</div>
+            <p class="text-justify lg:text-lg leading-[170%] text-gray-800 max-lg:text-center px-4">
                 مراکز تحت پوشش در نقشه مشخص شده اند که با نرم افزار متین طب در بخش سلامت در حال فعالیت می باشند در بخش
                 سلامت در حال فعالیت می باشند
             </p>
@@ -198,7 +198,7 @@ const pathMouseOver = (e: MouseEvent, id: number) => {
             <div id="map-state-count-tooltip" class="fixed z-20">
                 {{ stateCounts.find(item => item.id === notBlurPath)?.count }}
             </div>
-            <svg class="group w-[500px]" viewBox="0 0 498 451" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="group w-[300px] md:w-[400px] min-[1200px]:w-[500px]" viewBox="0 0 498 451" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g v-for="path in stateCounts">
                     <path
                         @mouseover="pathMouseOver($event,path.id)"

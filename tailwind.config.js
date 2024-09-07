@@ -13,6 +13,10 @@ module.exports = {
     ],
     theme: {
         extend: {
+            screens: {
+                "2xs": "400px",
+                "xs": "480px"
+            },
             container: {
                 center: true
             },

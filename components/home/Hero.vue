@@ -3,26 +3,26 @@
 </script>
 
 <template>
-    <header class="relative h-full padding-main flex-center w-[90%] pt-8">
+    <header class="relative h-full padding-main flex-center max-md:flex-col-reverse w-full gap-10 xl:gap-16 lg:w-[90%] pt-8">
 
-        <div class="flex flex-col items-start w-1/2 gap-10">
+        <div class="flex flex-col items-start w-full md:w-1/2 gap-6 xl:gap-10">
             <div class="flex flex-col">
-                <span class="py-0.5 text-[2.75rem] font-extrabold">شرکت مهندسی</span>
-                <span class="py-0.5 text-[2.75rem] font-extrabold text-gradient bg-gradient-to-r from-primary to-secondary">خورشید رایان طلوع</span>
+                <span class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-extrabold">شرکت مهندسی</span>
+                <span class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-extrabold text-gradient bg-gradient-to-r from-primary to-secondary">خورشید رایان طلوع</span>
             </div>
-            <p class="text-xl leading-loose text-gray-800">
+            <p class="xl:text-xl !leading-[175%] text-gray-800 text-justify">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
             </p>
-            <div class="flex items-center justify-start gap-5">
+            <div class="flex items-center justify-start gap-5 max-xl:mt-4">
 
                 <NuxtLink>
-                    <button class="bg-gradient-to-r from-primary to-secondary px-10 py-2.5 rounded-360 text-white">
+                    <button class="whitespace-nowrap bg-gradient-to-r from-primary to-secondary px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-white">
                         ارتباط با ما
                     </button>
                 </NuxtLink>
 
                 <NuxtLink>
-                    <button class="border-2 border-primary font-semibold px-10 py-2.5 rounded-360 text-primary">
+                    <button class="whitespace-nowrap border-2 border-primary font-semibold px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-primary">
                         درخواست همکاری
                     </button>
                 </NuxtLink>
@@ -30,33 +30,33 @@
             </div>
         </div>
 
-        <div class="flex items-center justify-end w-1/2">
+        <div class="flex items-center justify-center md:justify-end w-full md:w-1/2">
 
-            <div class="relative flex-center aspect-square size-2/3">
+            <div class="relative flex-center aspect-square size-[430px]">
 
                 <!-- top shapes -->
 
-                <div class="w-[10rem] h-[14rem] absolute overflow-hidden top-4 right-0 rounded-tl-[40px] rounded-bl-[40px] rounded-br-[40px] rounded-tr-[160px]">
+                <div class="w-[6rem] xl:w-[10rem] h-[10rem] xl:h-[14rem] translate-x-[100%] translate-y-[-38%] absolute overflow-hidden rounded-tl-[40px] rounded-bl-[40px] rounded-br-[40px] rounded-tr-[160px]">
                     <img src="/shape-1.png" class="object-fill size-full">
                 </div>
 
-                <div class="w-[14rem] h-[14rem] absolute overflow-hidden -top-10 left-2 rounded-tl-[160px] rounded-bl-[40px] rounded-br-[160px] rounded-tr-[160px]">
+                <div class="w-[10rem] xl:w-[14rem] h-[10rem] xl:h-[14rem] translate-x-[-40%] translate-y-[-65%] absolute overflow-hidden rounded-tl-[160px] rounded-bl-[40px] rounded-br-[160px] rounded-tr-[160px]">
                     <img src="/shape-1.png" class="object-fill size-full">
                 </div>
 
                 <!-- logo -->
 
-                <div class="p-4 bg-white flex-center rounded-360">
-                    <img src="/logo.png" class="size-10" alt="logo">
+                <div class="p-4 bg-white flex-center rounded-360 xl:mt-6">
+                    <img src="/logo.png" class="size-7 xl:size-10" alt="logo">
                 </div>
 
                 <!-- bottom shapes -->
 
-                <div class="w-[10rem] h-[13rem] absolute overflow-hidden bottom-0 left-2 rounded-tl-[40px] rounded-bl-[160px] rounded-br-[40px] rounded-tr-[40px]">
+                <div class="w-[6rem] xl:w-[10rem] h-[10rem] xl:h-[14rem] translate-x-[-100%] translate-y-[50%] absolute overflow-hidden rounded-tl-[40px] rounded-bl-[160px] rounded-br-[40px] rounded-tr-[40px]">
                     <img src="/shape-1.png" class="object-fill size-full">
                 </div>
 
-                <div class="w-[14rem] h-[9rem] absolute overflow-hidden bottom-0 right-0 rounded-tl-[40px] rounded-bl-[160px] rounded-br-[40px] rounded-tr-[40px]">
+                <div class="w-[10rem] xl:w-[14rem] h-[6rem] xl:h-[10rem] translate-x-[40%] translate-y-[100%] absolute overflow-hidden rounded-tl-[40px] rounded-bl-[160px] rounded-br-[40px] rounded-tr-[40px]">
                     <img src="/shape-1.png" class="object-fill size-full">
                 </div>
 
@@ -71,8 +71,8 @@
 </template>
 
 <style scoped>
-    .bg-radial-gradient {
-        --color: hsl(0, 0%, 0%);
-        background-image: radial-gradient(50% 50% at 50% 50%, var(--color) 0%, rgba(255, 255, 255, 0) 100%);
-    }
+.bg-radial-gradient {
+    --color: hsl(0, 0%, 0%);
+    background-image: radial-gradient(50% 50% at 50% 50%, var(--color) 0%, rgba(255, 255, 255, 0) 100%);
+}
 </style>

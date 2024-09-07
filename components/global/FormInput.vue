@@ -24,7 +24,7 @@
 </script>
 
 <template>
-    <div class="flex flex-col gap-1.5">
+    <div class="flex flex-col gap-1.5 w-full">
         <label 
             :for="id" 
             class="pr-1.5"
@@ -36,7 +36,7 @@
             {{ label }}
         </label>
         <input 
-            @change="$emit('update:modelValue', $event.target.value)" 
+            @change="$emit('update:modelValue', $event.target.value)"
             :id="id" 
             class="w-full h-12 px-4 transition-all border outline-none focus:border-primary focus:ring-2 focus:ring-offset-2 focus:ring-primary rounded-100"
             :class="{
