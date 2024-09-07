@@ -47,9 +47,11 @@
     >
         <TransitionWrapper slide-right>
             <div v-show="modelValue" 
-                class="w-[18.875rem] fixed inset-y-0 bg-white lg:hidden p-6"
+                class="w-[18.875rem] fixed bg-white lg:hidden p-6 z-highest" 
+                :style="{
+                    height: `${windowHeight}px`
+                }"
             >
-
                 <div class="flex items-center justify-between w-full pb-4 border-b border-main-red">
                     <button @click="close" class="flex items-center gap-3 pt-3 pr-2">
                         <i class="fa-solid fa-xmark text-black dark:text-white text-[1.4rem]"></i>
@@ -61,28 +63,23 @@
                     :style="{
                         height: `${windowHeight - 108}px`
                     }"
-                >
+                    >
                     <div class="flex flex-col py-3 divide-y gap-y-1">
-                        <button @click="scrollTo('#about-us')" class="flex items-center w-full gap-3 py-3 text-right">
-                            <i class="fa-solid fa-minus text-black dark:text-white text-[1rem] mr-2"></i>
-                            <p class="font-[IRANsans-light] text-black dark:text-white text-[.9rem]">درباره ما</p>
+                        <button 
+                            v-for="(link, index) in navLinks"
+                            :key="index"
+                            @click="scrollTo(link.path)"
+                            class="flex items-center w-full gap-3 py-3 text-right"
+                        >
+                            <i class="mr-2 font-semibold fa-solid fa-minus text-gradient bg-gradient-to-r from-secondary to-primary"></i>
+                            <p class="text-sm font-semibold text-black dark:text-white">{{ link.title }}</p>
                         </button>
-                        <button @click="scrollTo('#products')" class="flex items-center w-full gap-3 py-3 text-right">
-                            <i class="fa-solid fa-minus text-black dark:text-white text-[1rem] mr-2"></i>
-                            <p class="font-[IRANsans-light] text-black dark:text-white text-[.9rem]">محصولات</p>
-                        </button>
-                        <button @click="scrollTo('#prefactore')" class="flex items-center w-full gap-3 py-3 text-right">
-                            <i class="fa-solid fa-minus text-black dark:text-white text-[1rem] mr-2"></i>
-                            <p class="font-[IRANsans-light] text-black dark:text-white text-[.9rem]">پیش فاکتور</p>
-                        </button>
-                        <button @click="scrollTo('#contact-us')" class="flex items-center w-full gap-3 py-3 text-right">
-                            <i class="fa-solid fa-minus text-black dark:text-white text-[1rem] mr-2"></i>
-                            <p class="font-[IRANsans-light] text-black dark:text-white text-[.9rem]">ارتباط با ما</p>
-                        </button>
+                    
                     </div>
-                </div>            
+                </div>  
+                        
             </div>
-        </TransitionWrapper>
+        </TransitionWrapper> 
     </Overlay>
-
+    
 </template>
