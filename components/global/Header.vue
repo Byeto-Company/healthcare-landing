@@ -72,17 +72,17 @@ const currentHash = computed(() => route.hash);
                 <i class="fa-solid fa-bars text-[26px]"></i>
             </div>
 
-            <div @click="isDrawerShow=true"  class="w-[90px] lg:w-1/12 flex-center">
-                <img src="/logo-row.png"class="object-fill" alt="logo">
-            </div>
+            <button @click="isDrawerShow = true"  class="w-[90px] lg:w-1/12 flex-center">
+                <img src="/logo-row.png" class="object-fill" alt="logo">
+            </button>
 
         </div>
-        <client-only>
+        <ClientOnly>
             <Drawer
-                v-model:isDrawerShow="isDrawerShow"
-                :navLinks="navLink"
+                v-model="isDrawerShow"
+                :navLinks="navLinks"
             />
-        </client-only>
+        </ClientOnly>
 
     </div>
 </template>

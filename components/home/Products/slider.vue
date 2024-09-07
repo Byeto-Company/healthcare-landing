@@ -39,7 +39,7 @@ const onSlideChange = () => {
 </script>
 
 <template>
-    <div class="flex flex-col justify-center items-center gap-8 mt-16">
+    <div class="flex flex-col items-center justify-center gap-8 mt-16">
         <div class="w-[1000px] flex items-center gap-10">
             <button
                 :disabled="swiperInstance?.isBeginning"
@@ -49,22 +49,21 @@ const onSlideChange = () => {
             >
                 <i class="fa-solid fa-chevron-right text-[24px] text-white"></i>
             </button>
-            <swiper
+            <Swiper
                 grab-cursor
                 :slides-per-view="1"
                 :space-between="50"
-                centered-slides
                 @swiper="onSwiper"
                 @slide-change="onSlideChange"
-                class="rounded-150 overflow-hidden w-full"
+                class="w-full overflow-hidden rounded-150"
             >
-                <swiper-slide v-for="slide in activeItem?.slides" :key="slide.id">
+                <SwiperSlide v-for="slide in activeItem?.slides" :key="slide.id">
                     <div
-                        class="w-full aspect-video bg-red-500 rounded-150 relative overflow-hidden flex items-center justify-center">
-                        <img class="w-full h-full absolute object-cover" :src="slide.image" :alt="slide.description" />
+                        class="relative flex items-center justify-center w-full overflow-hidden bg-red-500 aspect-video rounded-150">
+                        <img class="absolute object-cover w-full h-full" :src="slide.image" :alt="slide.description" />
                     </div>
-                </swiper-slide>
-            </swiper>
+                </SwiperSlide>
+            </Swiper>
             <button
                 :disabled="swiperInstance?.isEnd"
                 :class="{'!grayscale' : swiperInstance?.isEnd}"
@@ -74,12 +73,12 @@ const onSlideChange = () => {
                 <i class="fa-solid fa-chevron-left text-[24px] text-white"></i>
             </button>
         </div>
-        <div class="flex justify-center items-center py-2">
-            <span class="text-white font-bold text-3xl">
+        <div class="flex items-center justify-center py-2">
+            <span class="text-3xl font-bold text-white">
                 {{ activeItem?.slides.find(s => s.id === activeSlide)!.description }}
             </span>
         </div>
-        <div class="flex justify-center items-center gap-4">
+        <div class="flex items-center justify-center gap-4">
             <button
                 v-for="(_slide, index) in swiperInstance?.slides"
                 @click="swiperInstance?.slideTo(index)"
