@@ -53,6 +53,7 @@ const onSlideChange = () => {
                 grab-cursor
                 :slides-per-view="1"
                 :space-between="50"
+                centered-slides
                 @swiper="onSwiper"
                 @slide-change="onSlideChange"
                 class="w-full overflow-hidden rounded-150"

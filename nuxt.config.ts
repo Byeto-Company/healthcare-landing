@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     },
 
     css: [
+        'swiper/css',
         "~/assets/css/tailwind.css",
         "~/assets/css/style.css"
     ],
