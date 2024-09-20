@@ -6,7 +6,7 @@
 
 // state
 
-const activeProduct = ref(1);
+const activeProduct = ref(products[0]);
 const activeCategory = ref("all");
 
 // computed
@@ -22,11 +22,7 @@ const filteredProductsByCategory = computed(() => {
 
 const changeActiveCategory = (id: string) => {
     activeCategory.value = id;
-    changeActiveProduct(filteredProductsByCategory.value[0].id)
-};
-
-const changeActiveProduct = (id: number) => {
-    activeProduct.value = id;
+    activeProduct.value = filteredProductsByCategory.value[0]
 };
 
 </script>
@@ -49,8 +45,7 @@ const changeActiveProduct = (id: number) => {
                 :active-category="activeCategory"
             />
             <ProductsGrid
-                @change-active-product="changeActiveProduct"
-                :active-product="activeProduct"
+                v-model:active-product="activeProduct"
                 :products="filteredProductsByCategory"
             />
         </div>

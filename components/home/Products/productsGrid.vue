@@ -8,7 +8,7 @@ type Props = {
 }
 
 type EmitProps = {
-    changeActiveProduct: [id: number]
+    'update:activeProduct': [product: Product]
 }
 
 // emits
@@ -23,17 +23,17 @@ defineProps<Props>();
 
 <template>
     <div class="w-full flex justify-center items-center">
-        <div class="w-full grid grid-cols-3 justify-items-center max-w-[1200px] justify-center items-center">
+        <div class="w-full grid grid-cols-3 gap-4 justify-items-center max-w-[1200px] justify-center items-center">
             <button
-                @click="$emit('changeActiveProduct',product.id)"
-                class="px-6 py-4 rounded-150 flex items-center gap-8 border-2 border-transparent w-full justify-center"
-                :class="{'bg-gradient-to-r from-primary/10 to-secondary/10 !border-secondary' : product.id === activeProduct}"
-                v-for="product in products"
-                :key="product.id"
+                @click="$emit('update:activeProduct', product)"
+                class="px-6 py-4 rounded-150 flex items-center gap-8 border-2 active:scale-95 bg-gray-600/20 transition-all border-transparent w-full justify-center"
+                :class="{'bg-gradient-to-r from-primary/10 to-secondary/10 !border-secondary' : product.id === activeProduct.id}"
+                v-for="(product, index) in products"
+                :key="index"
             >
             <span
-                :class="{'text-gradient bg-gradient-to-r from-primary to-secondary' : product.id === activeProduct}"
-                class="text-xl text-white font-bold"
+                :class="{'text-gradient bg-gradient-to-r from-primary to-secondary' : product.id === activeProduct.id}"
+                class="text-xl text-white font-bold transition-all"
             >
                     {{ product.title }}
             </span>

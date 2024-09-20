@@ -15,16 +15,12 @@ type Props = {
 
 const props = defineProps<Props>();
 
+const { products, activeProduct } = toRefs(props)
+
+
 // states
 
 const swiperInstance = ref<SwiperClass>();
-const activeSlide = ref(1);
-
-// computed
-
-const activeItem = computed(() => {
-    return props.products.find(p => p.id === props.activeProduct);
-});
 
 // methods
 
@@ -32,9 +28,12 @@ const onSwiper = (swiper: SwiperClass) => {
     swiperInstance.value = swiper;
 };
 
-const onSlideChange = () => {
-    activeSlide.value = activeItem.value ? activeItem.value.slides[swiperInstance.value?.activeIndex ?? 0].id : 0;
-};
+watch(
+    () => activeProduct.value,
+    () => {
+        swiperInstance.value.slideTo(0)
+    } 
+)
 
 </script>
 
@@ -58,7 +57,7 @@ const onSlideChange = () => {
                 @slide-change="onSlideChange"
                 class="w-full overflow-hidden rounded-150"
             >
-                <SwiperSlide v-for="slide in activeItem?.slides" :key="slide.id">
+                <SwiperSlide v-for="slide in activeProduct?.slides" :key="slide.id">
                     <div
                         class="relative flex items-center justify-center w-full overflow-hidden aspect-video rounded-150">
                         <img class="absolute object-cover w-full h-full" :src="slide.image" :alt="slide.description" />
@@ -76,7 +75,7 @@ const onSlideChange = () => {
         </div>
         <div class="flex items-center justify-center py-2">
             <span class="text-3xl font-bold text-white">
-                {{ activeItem?.slides.find(s => s.id === activeSlide)!.description }}
+                {{ swiperInstance && activeProduct!.slides[swiperInstance.activeIndex].description }}
             </span>
         </div>
         <div class="flex items-center justify-center gap-4">
