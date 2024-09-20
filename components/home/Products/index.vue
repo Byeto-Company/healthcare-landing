@@ -1,131 +1,13 @@
 <script setup lang="ts">
 
+// imports
+
+    import products from '~/assets/products.json'
+
 // state
 
 const activeProduct = ref(1);
 const activeCategory = ref("all");
-const products: Product[] = [
-    {
-        id: 1,
-        description: "asdadasdas",
-        image: "/confirmation.png",
-        label: "test1",
-        title: "asdadasdasdasd",
-        slides: [
-            {
-                id: 1,
-                image: "/confirmation.png",
-                description: "222222"
-            },
-            {
-                id: 2,
-                image: "/confirmation.png",
-                description: "12312312"
-            },
-            {
-                id: 3,
-                image: "/confirmation.png",
-                description: "33323232323"
-            }
-        ]
-    },
-    {
-        id: 2,
-        description: "asdadasdas",
-        image: "/confirmation.png",
-        label: "test2",
-        title: "asdadasdasdasd",
-        slides: [
-            {
-                id: 1,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            },
-            {
-                id: 2,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            },
-            {
-                id: 3,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            }
-        ]
-    },
-    {
-        id: 3,
-        description: "asdadasdas",
-        image: "/confirmation.png",
-        label: "test2",
-        title: "asdadasdasdasd",
-        slides: [
-            {
-                id: 1,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            },
-            {
-                id: 2,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            },
-            {
-                id: 3,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            }
-        ]
-    },
-    {
-        id: 4,
-        description: "asdadasdas",
-        image: "/confirmation.png",
-        label: "test1",
-        title: "asdadasdasdasd",
-        slides: [
-            {
-                id: 1,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            },
-            {
-                id: 2,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            },
-            {
-                id: 3,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            }
-        ]
-    },
-    {
-        id: 5,
-        description: "asdadasdas",
-        image: "/confirmation.png",
-        label: "test3",
-        title: "asdadasdasdasd",
-        slides: [
-            {
-                id: 1,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            },
-            {
-                id: 2,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            },
-            {
-                id: 3,
-                image: "/confirmation.png",
-                description: "asdasdasd"
-            }
-        ]
-    }
-];
 
 // computed
 
@@ -133,13 +15,14 @@ const filteredProductsByCategory = computed(() => {
     if (activeCategory.value === "all") {
         return products;
     }
-    return products.filter(f => f.label === activeCategory.value);
+    return products.filter(f => f.category === activeCategory.value);
 });
 
 // methods
 
 const changeActiveCategory = (id: string) => {
     activeCategory.value = id;
+    changeActiveProduct(filteredProductsByCategory.value[0].id)
 };
 
 const changeActiveProduct = (id: number) => {

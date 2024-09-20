@@ -21,10 +21,10 @@ const props = defineProps<Props>();
 
 const categories = computed(() => {
     const categoriesList: string[] = [];
-    const labels = props.products.map(product => product.label);
-    labels.forEach(label => {
-        if (!categoriesList.includes(label)) {
-            categoriesList.push(label);
+    const categories = props.products.map(product => product.category);
+    categories.forEach(category => {
+        if (!categoriesList.includes(category)) {
+            categoriesList.push(category);
         }
     });
 
