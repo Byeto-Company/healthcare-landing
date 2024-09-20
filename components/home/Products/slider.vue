@@ -38,7 +38,7 @@ watch(
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center gap-8 mt-16">
+    <div id="slider" class="flex flex-col items-center justify-center gap-8 mt-16">
         <div class="flex items-center w-2/3 gap-10">
             <button
                 :disabled="swiperInstance?.isBeginning"
