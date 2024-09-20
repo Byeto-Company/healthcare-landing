@@ -51,8 +51,8 @@ const currentHash = computed(() => route.hash);
 </script>
 
 <template>
-    <div class="sticky top-0 z-50 w-full shadow-sm">
-        <div class="flex container justify-between items-center h-[4.75rem] bg-white z-higher padding-main">
+    <div class="sticky top-0 z-50 w-full shadow-sm bg-white">
+        <div class="flex container justify-between items-center h-[4.75rem] z-higher padding-main">
 
             <div class="flex items-center justify-start w-11/12 gap-[3rem] max-lg:hidden">
                 <NuxtLink

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="w-full flex-center">
+    <section class="w-full container flex-center">
 
         <div class="w-full xl:w-[90%] flex items-center gap-12 max-lg:flex-col-reverse">
 

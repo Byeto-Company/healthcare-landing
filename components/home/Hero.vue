@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <header class="relative h-full padding-main flex-center max-md:flex-col-reverse w-full gap-10 xl:gap-16 lg:w-[90%] pt-8">
+    <header class="relative container h-full padding-main flex-center max-md:flex-col-reverse w-full gap-10 xl:gap-16 lg:w-[90%] pt-8">
 
         <div class="flex flex-col items-start w-full md:w-1/2 gap-6 xl:gap-10">
             <div class="flex flex-col">

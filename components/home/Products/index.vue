@@ -32,26 +32,28 @@ const changeActiveProduct = (id: number) => {
 </script>
 
 <template>
-    <section class="bg-pattern-hex w-full py-[150px]">
-        <SectionTitle
-            theme="dark"
-            title="محصولات خورشید رایان طلوع"
-            description="گسترش روز به روز محصولات کار گروهی مجرب و سخت کوش است"
-        />
-        <Slider
-            :active-product="activeProduct"
-            :products="products"
-        />
-        <Categories
-            @change-active-category="changeActiveCategory"
-            :products="products"
-            :active-category="activeCategory"
-        />
-        <ProductsGrid
-            @change-active-product="changeActiveProduct"
-            :active-product="activeProduct"
-            :products="filteredProductsByCategory"
-        />
+    <section class="w-full bg-pattern-hex">
+        <div class="container w-full py-[150px]">
+            <SectionTitle
+                theme="dark"
+                title="محصولات خورشید رایان طلوع"
+                description="گسترش روز به روز محصولات کار گروهی مجرب و سخت کوش است"
+            />
+            <Slider
+                :active-product="activeProduct"
+                :products="products"
+            />
+            <Categories
+                @change-active-category="changeActiveCategory"
+                :products="products"
+                :active-category="activeCategory"
+            />
+            <ProductsGrid
+                @change-active-product="changeActiveProduct"
+                :active-product="activeProduct"
+                :products="filteredProductsByCategory"
+            />
+        </div>
     </section>
 </template>
 
