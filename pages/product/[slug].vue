@@ -42,7 +42,7 @@
 </script>
 
 <template>
-    <section class="w-full h-full flex flex-col items-center gap-[4.25rem] min-h-[100svh]">
+    <section class="w-full h-full flex flex-col container items-center gap-[4.25rem] min-h-[100svh]">
         
         <div class="w-full -mt-10 padding-main flex-center">
             <div class="w-full h-[20rem] flex flex-col justify-center gap-10 bg-black rounded-150">
