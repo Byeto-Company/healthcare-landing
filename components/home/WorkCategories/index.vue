@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section>
+    <section class="mt-[6.25rem]">
         <SectionTitle
             title="حوزه کاری خورشید رایان طلوع"
             description="در این قسمت با حوزه های فعالیت شرکت آشنا میشوید و شناختی کامل از تمامی خدمات شرکت و تیم قدرتمند ما پیدا میکنید"
