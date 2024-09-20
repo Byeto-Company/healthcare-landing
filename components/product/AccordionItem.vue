@@ -43,14 +43,16 @@
             <span>{{ title }}</span>
             <i class="text-sm transition-all fa-solid fa-chevron-down" :class="isActive ? 'rotate-180' : ''"></i>
         </button>
-        <div :class="isActive ? 'pb-4' : 'hidden'" class="flex flex-col gap-4 h-max">
-            <NuxtLink 
-                v-for="(link, index) in items" 
-                :key="index"
-                :to="link.path"
-            >
-                {{ link.title }}
-            </NuxtLink>
+        <div :class="isActive ? 'pb-4 grid-rows-[1fr]' : 'grid-rows-[0fr]'" class="grid overflow-hidden transition-all duration-300 ease-in-out gap-4">
+            <div class="overflow-hidden">
+                <NuxtLink 
+                    v-for="(link, index) in items" 
+                    :key="index"
+                    :to="link.path"
+                >
+                    {{ link.title }}
+                </NuxtLink>
+            </div>
         </div>
     </div>
 </template>
