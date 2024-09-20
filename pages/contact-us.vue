@@ -21,13 +21,13 @@
 </script>
 
 <template>
-    <section class="w-full h-full flex flex-col items-center relative gap-[6.25rem] min-h-[100svh]">
+    <section class="w-full h-full flex flex-col items-center justify-center relative gap-[6.25rem] min-h-[100svh]">
 
         <!-- orbs -->
         <div class="size-[200px] z-lowest bg-primary/80 blur-[150px] absolute top-1/2 -left-10 -translate-y-1/2"></div>
         <div class="size-[200px] z-lowest bg-secondary/80 blur-[150px] absolute top-1/2 -right-10 -translate-y-1/2"></div>
 
-        <div class="flex flex-col items-center w-full pb-[4.25rem] z-high">
+        <div class="flex flex-col items-center container w-full pb-[4.25rem] z-high">
 
             <SectionTitle
                 title="فرم ثبت درخواست دمو پروژه"
