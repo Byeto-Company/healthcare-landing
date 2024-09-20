@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "description": "Sample description for the main item 1",
+        "image": "https://images.pexels.com/photos/2486168/pexels-photo-2486168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+        "category": "1",
+        "title": "Sample Title 1",
+        "slides": [
+            {
+                "id": 1,
+                "image": "https://images.pexels.com/photos/355747/pexels-photo-355747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 1"
+            },
+            {
+                "id": 2,
+                "image": "https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 2"
+            },
+            {
+                "id": 3,
+                "image": "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 3"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "description": "Sample description for the main item 2",
+        "image": "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+        "category": "2",
+        "title": "Sample Title 2",
+        "slides": [
+            {
+                "id": 1,
+                "image": "https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 1"
+            },
+            {
+                "id": 2,
+                "image": "https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 2"
+            },
+            {
+                "id": 3,
+                "image": "https://images.pexels.com/photos/219330/pexels-photo-219330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 3"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "description": "Sample description for the main item 3",
+        "image": "https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+        "category": "3",
+        "title": "Sample Title 3",
+        "slides": [
+            {
+                "id": 1,
+                "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 1"
+            },
+            {
+                "id": 2,
+                "image": "https://images.pexels.com/photos/217007/pexels-photo-217007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 2"
+            },
+            {
+                "id": 3,
+                "image": "https://images.pexels.com/photos/2104151/pexels-photo-2104151.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 3"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "description": "Sample description for the main item 4",
+        "image": "https://images.pexels.com/photos/240040/pexels-photo-240040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+        "category": "4",
+        "title": "Sample Title 4",
+        "slides": [
+            {
+                "id": 1,
+                "image": "https://images.pexels.com/photos/39301/cat-cat-face-whiskers-close-up-39301.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 1"
+            },
+            {
+                "id": 2,
+                "image": "https://images.pexels.com/photos/1020035/pexels-photo-1020035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 2"
+            },
+            {
+                "id": 3,
+                "image": "https://images.pexels.com/photos/97424/pexels-photo-97424.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 3"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "description": "Sample description for the main item 5",
+        "image": "https://images.pexels.com/photos/34950/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+        "category": "4",
+        "title": "Sample Title 5",
+        "slides": [
+            {
+                "id": 1,
+                "image": "https://images.pexels.com/photos/29906/pexels-photo-29906.jpg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 1"
+            },
+            {
+                "id": 2,
+                "image": "https://images.pexels.com/photos/462353/pexels-photo-462353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 2"
+            },
+            {
+                "id": 3,
+                "image": "https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 3"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "description": "Sample description for the main item 6",
+        "image": "https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+        "category": "6",
+        "title": "Sample Title 6",
+        "slides": [
+            {
+                "id": 1,
+                "image": "https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 1"
+            },
+            {
+                "id": 2,
+                "image": "https://images.pexels.com/photos/355395/pexels-photo-355395.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 2"
+            },
+            {
+                "id": 3,
+                "image": "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1080&w=1920",
+                "description": "Slide description 3"
+            }
+        ]
+    }
+]
