@@ -3,26 +3,26 @@
 </script>
 
 <template>
-    <header class="relative container h-full padding-main flex-center max-md:flex-col-reverse w-full gap-10 xl:gap-16 lg:w-[90%] pt-8">
+    <header class="relative container h-full padding-main flex-center max-md:flex-col-reverse w-full md:gap-10 xl:gap-16 lg:w-[90%] pt-8">
 
-        <div class="flex flex-col items-start w-full md:w-1/2 gap-6 xl:gap-10">
-            <div class="flex flex-col">
-                <span class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-extrabold">شرکت مهندسی</span>
-                <span class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-extrabold text-gradient bg-gradient-to-r from-primary to-secondary">خورشید رایان طلوع</span>
+        <div class="flex flex-col items-center lg:items-start w-full md:w-1/2 gap-4 xl:gap-8">
+            <div class="flex flex-col items-center lg:items-start">
+                <span class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold">شرکت مهندسی</span>
+                <span class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold text-gradient bg-gradient-to-r from-primary to-secondary">خورشید رایان طلوع</span>
             </div>
-            <p class="xl:text-xl !leading-[175%] text-gray-800 text-justify">
+            <p class="xl:text-xl text-center lg:text-start !leading-[175%] text-gray-800">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
             </p>
-            <div class="flex items-center justify-start gap-5 max-xl:mt-4">
+            <div class="flex items-center justify-center lg:justify-start gap-3 lg:gap-5 max-xl:mt-3">
 
                 <NuxtLink>
-                    <button class="whitespace-nowrap bg-gradient-to-r from-primary to-secondary px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-white">
+                    <button class="whitespace-nowrap text-sm lg:text-[1rem] bg-gradient-to-r from-primary to-secondary px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-white">
                         ارتباط با ما
                     </button>
                 </NuxtLink>
 
                 <NuxtLink>
-                    <button class="whitespace-nowrap border-2 border-primary font-semibold px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-primary">
+                    <button class="whitespace-nowrap text-sm lg:text-[1rem] border-2 border-primary font-semibold px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-primary">
                         درخواست همکاری
                     </button>
                 </NuxtLink>

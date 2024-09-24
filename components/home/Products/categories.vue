@@ -4,6 +4,7 @@
 
 type Props = {
     products: Product[];
+    
     activeCategory: string;
 }
 
