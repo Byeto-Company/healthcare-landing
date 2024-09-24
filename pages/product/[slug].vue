@@ -44,31 +44,27 @@
 <template>
     <section class="w-full h-full flex flex-col container items-center gap-[4.25rem] min-h-[100svh]">
         
-        <div class="w-full -mt-10 padding-main flex-center">
-            <div class="w-full h-[20rem] flex flex-col justify-center gap-10 bg-black rounded-150">
+        <div class="w-full lg:-mt-10 padding-main flex-center mt-[40px]">
+            <div class="w-full h-[12rem] xs:h-[16rem] lg:h-[20rem] flex flex-col justify-center gap-6 xs:gap-10 bg-black rounded-150">
                 <div class="w-full gap-8 flex-center h-max">
 
-                    <img src="/title-shape-right.png" class="scale-85">
+                    <img src="/title-shape-right.png" class="scale-85 max-lg:hidden">
 
-                    <h1 class="text-3xl font-semibold text-white">
+                    <h1 class="text-2xl xs:text-3xl font-semibold text-white">
                         محصول شماره یک
                     </h1>
 
-                    <img src="/title-shape-left.png" class="scale-85">
+                    <img src="/title-shape-left.png" class="scale-85 max-lg:hidden">
 
                 </div>
 
-                <div class="gap-5 flex-center">
+                <div class="gap-2.5 xs:gap-5 flex-center">
 
-                    <span class="text-sm font-medium text-white">محصولات</span>
+                    <span class="text-xs xs:text-sm font-medium text-white">محصولات</span>
 
-                    <i class="text-sm text-white fa-solid fa-chevron-left"></i>
+                    <i class="text-xs xs:text-sm text-white fa-solid fa-chevron-left"></i>
 
-                    <span class="text-sm font-medium text-white">سیستم های مدیریت اطلاعات درمانی</span>
-
-                    <i class="text-sm text-white fa-solid fa-chevron-left"></i>
-
-                    <span class="text-sm font-medium text-gradient bg-gradient-to-r from-secondary to-primary">سیستم مدیریت اطلاعات بیمارستانی</span>
+                    <span class="text-xs xs:text-sm font-medium text-gradient bg-gradient-to-r from-secondary to-primary">سیستم مدیریت اطلاعات بیمارستانی</span>
 
                 </div>
 
@@ -79,7 +75,7 @@
 
             <!-- content -->
 
-            <article class="flex flex-col w-9/12 gap-16">
+            <article class="flex flex-col w-full lg:w-9/12 gap-16">
                 
                 <section class="flex flex-col gap-4">
 
@@ -89,7 +85,7 @@
                         densities="x1 x2"
                     />
 
-                    <p class="text-black leading-[2rem]">
+                    <p class="text-black leading-[2rem] text-justify">
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
                     </p>
                     
@@ -143,19 +139,17 @@
                         <span v-for="i in 4" :key="i" class="flex items-center gap-2.5">
                             <NuxtImg 
                                 src="/check.svg"
-                                class="shrink-0 size-9"
+                                class="shrink-0 size-7 xs:size-9"
                             />
                             <span class="text-sm font-medium text-gray-500">
                                 قابلیت های سیستم جامع
                             </span>
                         </span>
-
-
                     </div>
 
                 </section>
 
-                <p class="text-black leading-[2rem]">
+                <p class="text-black leading-[2rem] text-justify">
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
                 </p>
 
@@ -163,7 +157,7 @@
 
             <!-- aside -->
 
-            <aside class="flex flex-col w-3/12 px-6 py-2 border-2 border-gray-200 h-max rounded-150">
+            <aside class="flex flex-col w-3/12 px-6 py-2 border-2 border-gray-200 h-max rounded-150 max-lg:hidden">
                 
                 <AccordionItem
                     v-for="(item, index) in accordions"
