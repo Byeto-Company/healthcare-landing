@@ -29,7 +29,7 @@ const changeActiveCategory = (id: string) => {
 
 <template>
     <section class="w-full bg-pattern-hex">
-        <div class="container w-full py-[150px]">
+        <div class="container w-full max-lg:px-5 py-[150px]">
             <SectionTitle
                 theme="dark"
                 title="محصولات خورشید رایان طلوع"
