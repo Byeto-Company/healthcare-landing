@@ -42,13 +42,13 @@
 </script>
 
 <template>
-    <div :id="`row-${index}`" class="flex items-center justify-between w-full z-higher" :class="direction == 'left' ? 'flex-row-reverse' : 'flex-row'">
+    <div :id="`row-${index}`" class="flex items-center justify-between w-full gap-5 max-lg:flex-col lg:gap-0 z-higher" :class="direction == 'left' ? 'flex-row-reverse' : 'flex-row'">
 
-        <div class="relative flex items-center w-1/2">
+        <div class="relative flex items-center w-full lg:w-1/2">
             
             <!-- left -->
             
-            <div class="relative w-1/5 h-max" :class="direction == 'right' ? 'hidden' : 'flex-center'">
+            <div class="relative w-1/5 h-max" :class="direction == 'right' ? 'hidden' : 'hidden lg:flex-center'">
             
                 <svg viewBox="0 0 198 71" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M194.574 68.445L141 68.4449L88.8897 3.12846L2.99999 3.12872" stroke="#3B3D41" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
@@ -64,11 +64,11 @@
 
             </div>
 
-            <img :src="image" class="w-4/5 rounded-150 image-shadow" alt="confirmation-1">
+            <img :src="image" class="w-full lg:w-4/5 rounded-150 image-shadow" alt="confirmation-1">
 
             <!-- right -->
 
-            <div class="relative w-1/5 h-max" :class="direction == 'left' ? 'hidden' : 'flex-center'">
+            <div class="relative w-1/5 h-max" :class="direction == 'left' ? 'hidden' : 'hidden lg:flex-center'">
 
                 <svg viewBox="0 0 198 71" class="rotate-180" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.42628 68.445L57 68.4449L109.11 3.12846L195 3.12872" stroke="#3B3D41" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
@@ -86,7 +86,7 @@
             
         </div>
 
-        <span class="flex items-center w-1/2 text-3xl font-semibold text-white" :class="direction == 'left' ? 'justify-start' : 'justify-end'">
+        <span class="flex items-center w-full text-lg font-semibold text-white max-lg:py-3 bg-primary lg:bg-transparent rounded-100 lg:rounded-none lg:text-3xl lg:w-1/2" :class="direction == 'left' ? 'justify-center lg:justify-start' : 'justify-center lg:justify-end'">
             {{ text }}
         </span>
 
