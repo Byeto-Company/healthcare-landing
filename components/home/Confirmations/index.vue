@@ -41,6 +41,7 @@
             tl.fromTo('.middle-line', {height: '0%'}, {height: '100%', scrollTrigger: {
                 trigger: '#confirmations',
                 start: '40% bottom',
+                end: 'bottom center',
                 scrub: true
             }})
         }, 100);
