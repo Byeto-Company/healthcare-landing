@@ -4,6 +4,14 @@
 
     import products from '~/assets/products.json'
 
+// props
+
+    type Props = {
+        productsData: Product[]
+    };
+
+    defineProps<Props>()
+
 // state
 
 const activeProduct = ref(products[0]);
