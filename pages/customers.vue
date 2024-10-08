@@ -1,16 +1,23 @@
 <script setup lang="ts">
-import { QUERY_KEYS } from "~/constants";
-import { handleGetCustomers, initialPageParam } from "~/composables/api/customers/useGetCustomers";
 
-const { $queryClient: queryClient } = useNuxtApp();
+// imports
 
-onServerPrefetch(async () => {
-    await queryClient.prefetchInfiniteQuery({
-        queryKey: [QUERY_KEYS.customers],
-        queryFn: ({ pageParam }) => handleGetCustomers(pageParam),
-        initialPageParam
+    import { QUERY_KEYS } from "~/constants";
+    import { handleGetCustomers, initialPageParam } from "~/composables/api/customers/useGetCustomers";
+
+// state
+
+    const { $queryClient: queryClient } = useNuxtApp();
+
+// queries
+
+    onServerPrefetch(async () => {
+        await queryClient.prefetchInfiniteQuery({
+            queryKey: [QUERY_KEYS.customers],
+            queryFn: ({ pageParam }) => handleGetCustomers(pageParam),
+            initialPageParam
+        });
     });
-});
 
 </script>
 
