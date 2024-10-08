@@ -4,10 +4,14 @@ export const API_ENDPOINTS = {
     },
     product: {
         getOne: "/product"
+    },
+    homepage: {
+        get: '/about/main'
     }
 };
 
 export const QUERY_KEYS = {
     customers: "customers",
-    product: 'product'
+    product: 'product',
+    homepage: 'homepage'
 };
