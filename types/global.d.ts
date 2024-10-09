@@ -1,4 +1,4 @@
-export { };
+export {};
 
 declare global {
     type ApiPaginated<T> = {
@@ -15,19 +15,6 @@ declare global {
         program_name: string,
         province: number,
         city: number
-    }
-
-    type Product = {
-        id: number,
-        title: string,
-        description: string,
-        label: string,
-        image: string,
-        slides: {
-            id: number,
-            image: string,
-            description: string
-        }[]
     }
 
     type Logo = {
@@ -49,15 +36,29 @@ declare global {
     }
 
     type Product = {
-        id: number;
-        name: string;
-        description: string;
+        id: number,
+        name: string,
+        slug: string,
+        description: string,
         category: {
-            id: number;
-            name: string;
-            breadcrumb: string;
-        };
-        product_icon_photo: string;
+            id: number,
+            name: string,
+            breadcrumb: string
+        },
+        slides: {
+            id: number,
+            image: string,
+            description: string
+        }[],
+        main_photo: string,
+        secend_photo: string,
+        product_icon_photo: string,
+        features_list: {
+            feature_text: string
+        }[],
+        details_list: {
+            detail_text: string
+        }[]
     }
 
     type Manager = {
@@ -161,7 +162,7 @@ declare global {
                 id: number,
                 name: string,
                 image: string,
-                description:  string,
+                description: string,
                 ordering: number
             }[]
         },
@@ -189,40 +190,41 @@ declare global {
                 description: string
             }
         },
-        about_us : {
-            image : string,
-            title : string,
-            description : string,
-            projects : {
-                count : number,
-                title : string
+        products: Product[],
+        about_us: {
+            image: string,
+            title: string,
+            description: string,
+            projects: {
+                count: number,
+                title: string
             }[]
         },
         hero: {
             title: string,
             description: string,
             buttons: {
-                title : string,
-                link : string
+                title: string,
+                link: string
             }[],
             images: {
                 alt: string,
                 link: string
             }[]
         }
-        footer : {
-            title : string,
+        footer: {
+            title: string,
             description: string,
-            address : string,
-            social : {
+            address: string,
+            social: {
                 icon: string,
                 alt: string,
                 link: string
             }[],
             copyright: string,
-            emails : string[],
-            phones : string[],
-            socials : string[],
+            emails: string[],
+            phones: string[],
+            socials: string[],
         },
     }
 }

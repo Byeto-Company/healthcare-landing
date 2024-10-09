@@ -24,8 +24,8 @@ const categories = computed(() => {
     const categoriesList: string[] = [];
     const categories = props.products.map(product => product.category);
     categories.forEach(category => {
-        if (!categoriesList.includes(category)) {
-            categoriesList.push(category);
+        if (!categoriesList.includes(category.name)) {
+            categoriesList.push(category.name);
         }
     });
 

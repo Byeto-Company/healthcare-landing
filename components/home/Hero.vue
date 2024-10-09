@@ -4,14 +4,6 @@
 
 import useGetContent from "~/composables/api/useGetContent";
 
-type Props = {
-    heroData: HeroProps,
-    logo: {
-        link: string,
-        alt: string
-    }
-};
-
 // props
 
 const { data: content } = useGetContent();

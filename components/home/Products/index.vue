@@ -2,35 +2,32 @@
 
 // imports
 
-    import products from '~/assets/products.json'
-
-// props
-
-    type Props = {
-        productsData: Product[]
-    };
-
-    defineProps<Props>()
+import useGetContent from "~/composables/api/useGetContent";
 
 // state
 
-const activeProduct = ref(products[0]);
+const { data: content } = useGetContent();
+
+const products = toRef(content.value!.products)
+
+const activeProduct = ref(products.value[0]);
 const activeCategory = ref("all");
+
 
 // computed
 
 const filteredProductsByCategory = computed(() => {
     if (activeCategory.value === "all") {
-        return products;
+        return products.value;
     }
-    return products.filter(f => f.category === activeCategory.value);
+    return products.value.filter(f => f.category.name === activeCategory.value);
 });
 
 // methods
 
 const changeActiveCategory = (id: string) => {
     activeCategory.value = id;
-    activeProduct.value = filteredProductsByCategory.value[0]
+    activeProduct.value = filteredProductsByCategory.value[0];
 };
 
 </script>
