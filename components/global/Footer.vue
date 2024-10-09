@@ -1,5 +1,9 @@
 <script setup lang="ts">
 
+import useGetContent from "~/composables/api/useGetContent";
+
+const { data: content } = useGetContent();
+
 </script>
 
 <template>
@@ -7,17 +11,24 @@
     <div class="z-higher w-full mt-24 shadow-sm bg-pattern-hex bg-gray-950">
         <div class="container w-full h-full gap-12 flex-col-center padding-main">
 
-            <div class="max-md:flex-col bg-primary w-full -mt-24 px-6 md:px-[3.5rem] py-10 md:py-[3rem] flex items-center justify-between [background-image:_url('/pattern-curve.png')] [background-size:_80%] rounded-250">
+            <div
+                class="max-md:flex-col bg-primary w-full -mt-24 px-6 md:px-[3.5rem] py-10 md:py-[3rem] flex items-center justify-between [background-image:_url('/pattern-curve.png')] [background-size:_80%] rounded-250">
 
                 <div class="flex flex-col w-full md:w-1/2 items-start gap-[1.7rem] max-md:items-center">
 
-                    <span class="text-3xl md:text-4xl font-semibold text-white whitespace-nowrap max-md:text-center">با ما در ارتباط باشید...</span>
+                    <span class="text-3xl md:text-4xl font-semibold text-white whitespace-nowrap max-md:text-center">
+                        {{ content?.footer.title }}
+                    </span>
 
-                    <p class="text-white leading-[2rem] text-justify max-md:text-center">در این قسمت با حوزه های فعالیت شرکت آشنا میشوید و شناختی کامل از تمامی خدمات شرکت و تیم قدرتمند ما پیدا میکنید</p>
+                    <p class="text-white leading-[2rem] text-justify max-md:text-center">
+                        {{ content?.footer.description }}
+                    </p>
 
                 </div>
 
-                <div class="flex max-md:mt-8 md:flex-col items-end gap-[1rem] max-sm:items-center max-md:justify-center max-md:flex-wrap">
+                <div
+                    class="flex max-md:mt-8 md:flex-col items-end gap-[1rem] max-sm:items-center max-md:justify-center max-md:flex-wrap"
+                >
 
                     <button class="py-2.5 text-white px-7 bg-white/20 rounded-360 whitespace-nowrap">
                         درخواست همکاری
@@ -41,7 +52,7 @@
                             شرکت فنی مهندسی خورشید رایانه طلوع
                         </p>
                         <p class="text-sm text-gray-200">
-                            آدرس : شیراز خیابان میزرای شیرازی کوچه 16 میلاد - پلاک 129
+                            {{content?.footer.address}}
                         </p>
                     </div>
                     <div class="flex items-center gap-8 max-md:justify-center">
@@ -63,20 +74,21 @@
 
                 </div>
 
-                <div class="flex items-start justify-end w-full md:w-1/2 gap-8 lg:gap-16 max-md:flex-col max-md:items-center">
-                    
+                <div
+                    class="flex items-start justify-end w-full md:w-1/2 gap-8 lg:gap-16 max-md:flex-col max-md:items-center">
+
                     <div class="flex flex-col items-start gap-[1rem] max-md:items-center">
                         <span class="text-primary">ایمیل</span>
-                        <span class="text-gray-300">ar.shekoohi@gmail.com</span>
-                        <span class="text-gray-300">info@sunrisesys.ir</span>
+                        <span class="text-gray-300" v-for="email in content?.footer.emails">
+                            {{email}}
+                        </span>
                     </div>
 
                     <div class="flex flex-col items-start gap-[1rem]  max-md:items-center">
                         <span class="text-primary">تلفن های تماس</span>
-                        <span style="direction: ltr !important;" class="text-gray-300">+98 921 1997621</span>
-                        <span style="direction: ltr !important;" class="text-gray-300">+98 917 8338212</span>
-                        <span style="direction: ltr !important;" class="text-gray-300">+98 921 1997621</span>
-                        <span style="direction: ltr !important;" class="text-gray-300">+98 917 8338212</span>
+                        <span style="direction: ltr !important;" class="text-gray-300" v-for="phone in content?.footer.phones">
+                            {{phone}}
+                        </span>
                     </div>
 
                 </div>
@@ -96,7 +108,7 @@
 
         </div>
     </div>
-    
+
 </template>
 
 <style scoped>

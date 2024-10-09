@@ -1,6 +1,8 @@
 *{
     padding: 0;
     margin: 0;
+}
 
-    direction: rtl !important;
+.tsqd-parent-container {
+    direction: ltr !important;
 }

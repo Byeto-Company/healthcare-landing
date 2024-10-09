@@ -5,13 +5,13 @@ export const API_ENDPOINTS = {
     product: {
         getOne: "/product"
     },
-    homepage: {
-        get: '/about/main'
+    content : {
+        get : "/about/main"
     }
 };
 
 export const QUERY_KEYS = {
     customers: "customers",
     product: 'product',
-    homepage: 'homepage'
+    content : 'content'
 };

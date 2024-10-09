@@ -2,39 +2,39 @@
 
 // types
 
-    type Props = {
-        title: string,
-        index: number,
-        id: string
-        count: number,
-        currentAccordionId: string | null,
-        items: [
-            {
-                title: string,
-                path: string
-            }
-        ]
-    }
+type Props = {
+    title: string,
+    index: number,
+    id: string
+    count: number,
+    currentAccordionId: string | null,
+    items: [
+        {
+            title: string,
+            path: string
+        }
+    ]
+}
 
 // emit
 
-    defineEmits(['update:currentAccordionId'])
+defineEmits(["update:currentAccordionId"]);
 
 // props
-    
-    const props = defineProps<Props>()
 
-    const { currentAccordionId, id } = toRefs(props)
+const props = defineProps<Props>();
+
+const { currentAccordionId, id } = toRefs(props);
 
 // computed
 
-    const isActive = computed(() => currentAccordionId.value == id.value)
+const isActive = computed(() => currentAccordionId.value == id.value);
 
 </script>
 
 <template>
     <div>
-        <button 
+        <button
             @click="$emit('update:currentAccordionId', isActive ? null : id)"
             type="button"
             :class="index != 1 ? 'border-t border-gray-200' : ''"
@@ -43,10 +43,11 @@
             <span>{{ title }}</span>
             <i class="text-sm transition-all fa-solid fa-chevron-down" :class="isActive ? 'rotate-180' : ''"></i>
         </button>
-        <div :class="isActive ? 'pb-4 grid-rows-[1fr]' : 'grid-rows-[0fr]'" class="grid overflow-hidden transition-all duration-300 ease-in-out gap-4">
+        <div :class="isActive ? 'pb-4 grid-rows-[1fr]' : 'grid-rows-[0fr]'"
+             class="grid overflow-hidden transition-all duration-300 ease-in-out gap-4">
             <div class="overflow-hidden">
-                <NuxtLink 
-                    v-for="(link, index) in items" 
+                <NuxtLink
+                    v-for="(link, index) in items"
                     :key="index"
                     :to="link.path"
                 >

@@ -127,4 +127,102 @@ declare global {
         about_us: AboutUsProps;
         footer: FooterProps;
     }
+
+    type Content = {
+        logo: {
+            alt: string,
+            link: string
+        },
+        body_logo: {
+            alt: string,
+            link: string
+        },
+        work_fields: {
+            title: string,
+            description: string,
+            fields: {
+                tags: {
+                    title: string,
+                    link: string
+                }[],
+                image: {
+                    image: string,
+                    alt: string
+                },
+                title: string,
+                description: string,
+                ordering: number
+            }[]
+        },
+        leaders: {
+            title: string,
+            description: string,
+            members: {
+                id: number,
+                name: string,
+                image: string,
+                description:  string,
+                ordering: number
+            }[]
+        },
+        certificates: {
+            title: string,
+            description: string,
+            items: {
+                id: number,
+                image: string,
+                title: string,
+                description: string
+            }[]
+        },
+        variants: {
+            id: number,
+            customer_count: number
+        }[],
+        demo: {
+            image: null,
+            title: string,
+            subtitle: string,
+            description: string,
+            form: {
+                title: string,
+                description: string
+            }
+        },
+        about_us : {
+            image : string,
+            title : string,
+            description : string,
+            projects : {
+                count : number,
+                title : string
+            }[]
+        },
+        hero: {
+            title: string,
+            description: string,
+            buttons: {
+                title : string,
+                link : string
+            }[],
+            images: {
+                alt: string,
+                link: string
+            }[]
+        }
+        footer : {
+            title : string,
+            description: string,
+            address : string,
+            social : {
+                icon: string,
+                alt: string,
+                link: string
+            }[],
+            copyright: string,
+            emails : string[],
+            phones : string[],
+            socials : string[],
+        },
+    }
 }
