@@ -10,21 +10,22 @@ export default defineNuxtConfig({
                 {
                     rel: "stylesheet",
                     type: "text/css",
-                    href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-                }
-            ]
-        }
+                    href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css",
+                },
+            ],
+        },
     },
 
     css: [
-        'swiper/css',
+        "swiper/css",
         "~/assets/css/tailwind.css",
-        "~/assets/css/style.css"
+        "~/assets/css/style.css",
+        "vue-toastification/dist/index.css",
     ],
 
     components: [
         {
-            path: '~/components',
+            path: "~/components",
             pathPrefix: false,
         },
     ],
@@ -38,17 +39,14 @@ export default defineNuxtConfig({
 
     runtimeConfig: {
         public: {
-            API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:8000'
-        }
+            API_BASE_URL:
+                process.env.API_BASE_URL ?? "https://hcareapi.liara.run",
+        },
     },
 
     compatibilityDate: "2024-08-24",
 
-    plugins: [
-        '~/plugins/tanstack.ts'
-    ],
+    plugins: ["~/plugins/tanstack.ts"],
 
-    modules: [
-        "@nuxt/image"
-    ],
+    modules: ["@nuxt/image"],
 });
