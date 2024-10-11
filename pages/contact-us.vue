@@ -103,6 +103,7 @@ const handleSubmit = () => {
                     message: "",
                     accept_rules: false,
                 };
+                formValidator$.value.$reset();
             },
         });
     }
@@ -201,10 +202,9 @@ const handleSubmit = () => {
                 >
                     <span v-if="!isSubmitContactUsPending">ارسال پیام</span>
                     <span v-else>
-                        <!-- <i
+                        <i
                             class="text-xl text-white fa-solid fa-spinner animate-spin"
-                        ></i> -->
-                        در حال ارسال ...
+                        ></i>
                     </span>
                 </button>
             </form>
