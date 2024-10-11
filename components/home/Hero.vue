@@ -38,39 +38,41 @@ const heroImages = computed(() => {
 
 <template>
     <header
-        class="relative container h-full padding-main flex-center max-md:flex-col-reverse w-full md:gap-10 xl:gap-16 lg:w-[90%] pt-8">
+        class="relative container h-[calc(80svh-76px)] padding-main flex-center max-md:flex-col-reverse w-full md:gap-10 xl:gap-16 lg:w-[90%] pt-8">
 
-        <div class="flex flex-col items-center w-full gap-4 lg:items-start md:w-1/2 xl:gap-8">
-            <div class="flex flex-col items-center lg:items-start">
-                <span class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold">شرکت مهندسی</span>
-                <span
-                    class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold text-gradient bg-gradient-to-r from-primary to-secondary">
+        <div class="md:w-1/2 w-full flex items-center justify-center">
+            <div class="flex flex-col gap-4 items-start xl:gap-8">
+                <div class="flex flex-col items-center lg:items-start">
+                    <span class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold">شرکت مهندسی</span>
+                    <span
+                        class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold text-gradient bg-gradient-to-r from-primary to-secondary">
                     {{ content?.hero.title }}
                 </span>
-            </div>
-            <p class="xl:text-xl text-center lg:text-start !leading-[175%] text-gray-800">
-                {{ content?.hero.description }}
-            </p>
-            <div class="flex items-center justify-center gap-3 lg:justify-start lg:gap-5 max-xl:mt-3">
+                </div>
+                <p class="xl:text-xl text-center lg:text-start !leading-[175%] text-gray-800">
+                    {{ content?.hero.description }}
+                </p>
+                <div class="flex items-center justify-center gap-3 lg:justify-start lg:gap-5 max-xl:mt-3">
 
-                <NuxtLink>
-                    <button
-                        class="whitespace-nowrap text-sm lg:text-[1rem] bg-gradient-to-r from-primary to-secondary px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-white">
-                        ارتباط با ما
-                    </button>
-                </NuxtLink>
+                    <NuxtLink>
+                        <button
+                            class="whitespace-nowrap text-sm lg:text-[1rem] bg-gradient-to-r from-primary to-secondary px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-white">
+                            ارتباط با ما
+                        </button>
+                    </NuxtLink>
 
-                <NuxtLink>
-                    <button
-                        class="whitespace-nowrap text-sm lg:text-[1rem] border-2 border-primary font-semibold px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-primary">
-                        درخواست همکاری
-                    </button>
-                </NuxtLink>
+                    <NuxtLink>
+                        <button
+                            class="whitespace-nowrap text-sm lg:text-[1rem] border-2 border-primary font-semibold px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-primary">
+                            درخواست همکاری
+                        </button>
+                    </NuxtLink>
 
+                </div>
             </div>
         </div>
 
-        <div class="flex items-center justify-center w-full md:justify-end md:w-1/2">
+        <div class="flex items-center justify-center w-full md:w-1/2">
 
             <div class="relative flex-center aspect-square size-[430px]">
 
