@@ -3,6 +3,7 @@
 
 import type { SwiperClass } from "swiper/react";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import useBaseUrl from "~/composables/useBaseUrl";
 
 // types
 
@@ -22,6 +23,8 @@ const { products, activeProduct } = toRefs(props)
 
 const swiperInstance = ref<SwiperClass>();
 
+const baseUrl = useBaseUrl();
+
 // methods
 
 const onSwiper = (swiper: SwiperClass) => {
@@ -31,7 +34,7 @@ const onSwiper = (swiper: SwiperClass) => {
 watch(
     () => activeProduct.value,
     () => {
-        swiperInstance.value.slideTo(0)
+        swiperInstance.value?.slideTo(0)
     } 
 )
 
@@ -56,10 +59,10 @@ watch(
                 @swiper="onSwiper"
                 class="w-full overflow-hidden rounded-150"
             >
-                <SwiperSlide v-for="slide in activeProduct?.slides" :key="slide.id">
+                <SwiperSlide v-for="slide in activeProduct!.slides_list" :key="slide.id">
                     <div
                         class="relative flex items-center justify-center w-full overflow-hidden aspect-video rounded-100 lg:rounded-150">
-                        <img class="absolute object-cover w-full h-full" :src="slide.image" :alt="slide.description" />
+                        <img class="absolute object-cover w-full h-full" :src="baseUrl + slide.image" :alt="slide.description" />
                     </div>
                 </SwiperSlide>
             </Swiper>
@@ -74,7 +77,7 @@ watch(
         </div>
         <div class="flex items-center justify-center py-2">
             <span class="text-3xl font-bold text-white">
-                {{ swiperInstance && activeProduct!.slides[swiperInstance.activeIndex].description }}
+                {{ swiperInstance && activeProduct?.slides_list[swiperInstance.activeIndex].description }}
             </span>
         </div>
         <div class="flex items-center justify-center w-full gap-5 lg:hidden">

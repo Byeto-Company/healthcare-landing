@@ -13,7 +13,6 @@ const products = toRef(content.value!.products)
 const activeProduct = ref(products.value[0]);
 const activeCategory = ref("all");
 
-
 // computed
 
 const filteredProductsByCategory = computed(() => {
@@ -30,6 +29,10 @@ const changeActiveCategory = (id: string) => {
     activeProduct.value = filteredProductsByCategory.value[0];
 };
 
+watch(() => content.value, (n) => {
+    console.log(n, "--------");
+}, {immediate : true})
+
 </script>
 
 <template>
@@ -41,7 +44,7 @@ const changeActiveCategory = (id: string) => {
                 description="گسترش روز به روز محصولات کار گروهی مجرب و سخت کوش است"
             />
             <Slider
-                :active-product="activeProduct"
+                :activeProduct="activeProduct"
                 :products="products"
             />
             <Categories
@@ -50,7 +53,7 @@ const changeActiveCategory = (id: string) => {
                 :active-category="activeCategory"
             />
             <ProductsGrid
-                v-model:active-product="activeProduct"
+                v-model:activeProduct="activeProduct"
                 :products="filteredProductsByCategory"
             />
         </div>

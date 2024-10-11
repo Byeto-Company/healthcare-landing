@@ -45,7 +45,7 @@ declare global {
             name: string,
             breadcrumb: string
         },
-        slides: {
+        slides_list: {
             id: number,
             image: string,
             description: string
