@@ -75,10 +75,13 @@ watch(
                 <i class="fa-solid fa-chevron-left text-[24px] text-white"></i>
             </button>
         </div>
-        <div class="flex items-center justify-center py-2">
+        <div class="flex items-center justify-center py-2 flex-col gap-5">
             <span class="text-3xl font-bold text-white">
                 {{ swiperInstance && activeProduct?.slides_list[swiperInstance.activeIndex].description }}
             </span>
+            <a :href="`/product/${activeProduct.slug}`" class="px-4 h-[40px] rounded-md bg-primary flex items-center justify-center text-white">
+                مشاهده محصول
+            </a>
         </div>
         <div class="flex items-center justify-center w-full gap-5 lg:hidden">
             <button

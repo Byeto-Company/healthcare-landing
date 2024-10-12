@@ -209,6 +209,9 @@ const pathMouseOver = (e: MouseEvent, id: number) => {
                 مراکز تحت پوشش در نقشه مشخص شده اند که با نرم افزار متین طب در بخش سلامت در حال فعالیت می باشند در بخش
                 سلامت در حال فعالیت می باشند
             </p>
+            <a href="/customers" class="px-6 w-fit whitespace-nowrap h-[40px] rounded-full border-2 border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+                لیست مشتریان
+            </a>
         </div>
         <div class="drop-shadow-main">
             <svg class="group w-[300px] md:w-[400px] min-[1200px]:w-[500px]" viewBox="0 0 498 451" fill="none" xmlns="http://www.w3.org/2000/svg">
