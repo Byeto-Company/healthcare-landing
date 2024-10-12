@@ -20,28 +20,28 @@ const isDrawerShow = ref<boolean>(false);
 const navLinks = ref<navLink[]>([
     {
         title: "حوزه های کاری",
-        path: "#work-fields-section"
+        path: "#work-fields-section",
     },
     {
         title: "محصولات",
-        path: "#products-section"
+        path: "#products-section",
     },
     {
         title: "مدیران",
-        path: "#leaders-section"
+        path: "#leaders-section",
     },
     {
         title: "تایید نامه ها",
-        path: "#confirmations-section"
+        path: "#confirmations-section",
     },
     {
         title: "دمو",
-        path: "#demo-section"
+        path: "#demo-section",
     },
     {
         title: "درباره ما",
-        path: "#about-us-section"
-    }
+        path: "#about-us-section",
+    },
 ]);
 
 // queries
@@ -49,24 +49,10 @@ const navLinks = ref<navLink[]>([
 const { data: content } = useGetContent();
 
 const logo = computed(() => {
-<<<<<<< HEAD
     return {
         link: `${config.public.API_BASE_URL}/${content.value?.logo.link}`,
         alt: content.value?.body_logo.link,
     };
-=======
-    if (content.value) {
-        return {
-            link: `${config.public.API_BASE_URL}/${content.value.logo.link}`,
-            alt: content.value.body_logo.link
-        };
-    } else {
-        return {
-            link: "",
-            alt: ""
-        };
-    }
->>>>>>> 0845cbb263e701039924478bc8e31a58ea10caff
 });
 
 // methods
@@ -113,10 +99,7 @@ onMounted(() => {
                     {{ link.title }}
                 </NuxtLink>
 
-                <a href="/customers">
-                    مشتریان
-                </a>
-
+                <a href="/customers"> مشتریان </a>
             </div>
 
             <div @click="isDrawerShow = true" class="lg:hidden">
