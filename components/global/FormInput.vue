@@ -10,6 +10,7 @@ type Props = {
     theme: "light" | "dark";
     modelValue: string;
     id: string;
+    max?: number;
     validator?: any;
 };
 
@@ -33,6 +34,7 @@ defineProps<Props>();
         <input
             @input="$emit('update:modelValue', $event.target.value)"
             :id="id"
+            :max="max ?? undefined"
             class="w-full h-12 px-4 transition-all border outline-none focus:border-primary focus:ring-2 focus:ring-offset-2 focus:ring-primary rounded-100"
             :class="{
                 '!border-red-700 !ring-red-700': validator?.$error,
