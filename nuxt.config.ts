@@ -14,6 +14,13 @@ export default defineNuxtConfig({
                 },
             ],
         },
+        pageTransition: {
+            enterActiveClass:
+                "animate__animated animate__fadeIn animate__faster",
+            leaveActiveClass:
+                "animate__animated animate__fadeOut animate__faster",
+            mode: "out-in",
+        },
     },
 
     css: [
@@ -21,6 +28,7 @@ export default defineNuxtConfig({
         "~/assets/css/tailwind.css",
         "~/assets/css/style.css",
         "vue-toastification/dist/index.css",
+        "animate.css/animate.min.css",
     ],
 
     components: [
