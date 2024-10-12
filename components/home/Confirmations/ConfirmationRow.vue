@@ -179,8 +179,4 @@ onMounted(() => {
 .image-shadow {
     box-shadow: 0px 0px 100px hsla(179, 79%, 45%, 0.038);
 }
-<<<<<<< HEAD
 </style>
-=======
-</style>
->>>>>>> 696ca52b32115cbdbf7c5e54997c1e72d5b39873
