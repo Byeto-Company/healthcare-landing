@@ -35,10 +35,10 @@ const categories = computed(() => {
 <template>
     <div class="flex items-center justify-center w-full">
         <div
-            class="w-full mt-16 mb-10 overflow-x-auto bg-gray-700/70 flex-center rounded-100"
+            class="max-w-[80%] mt-16 mb-10 overflow-x-auto bg-gray-700/70 flex-center rounded-100"
         >
             <div
-                class="w-max flex-center lg:ps-80 lg:gap-[6.25rem] gap-10 lg:px-[6.25rem]"
+                class="w-max flex-center  lg:gap-[6.25rem] gap-10 lg:px-[6.25rem]"
             >
                 <button
                     class="relative h-full py-4 w-[4rem] text-xl text-white"
