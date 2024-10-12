@@ -14,7 +14,12 @@ export type GetProductResponse = {
     category: {
         id: number;
         name: string;
-        breadcrumb: string[];
+        slug: string;
+        parent: {
+            id: number;
+            name: string;
+            slug: string;
+        };
     };
     thumbnail: string;
     features_list: string[];
