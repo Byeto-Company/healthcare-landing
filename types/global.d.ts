@@ -45,7 +45,7 @@ declare global {
             name: string,
             breadcrumb: string
         },
-        slides: {
+        slides_list: {
             id: number,
             image: string,
             description: string
@@ -155,6 +155,11 @@ declare global {
                 ordering: number
             }[]
         },
+        states : {
+            id : number,
+            name : string,
+            customer_count : number
+        }[],
         leaders: {
             title: string,
             description: string,
@@ -176,10 +181,6 @@ declare global {
                 description: string
             }[]
         },
-        variants: {
-            id: number,
-            customer_count: number
-        }[],
         demo: {
             image: null,
             title: string,

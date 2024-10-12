@@ -45,14 +45,14 @@ const changeActiveCategory = (id: string) => {
                 title="محصولات خورشید رایان طلوع"
                 description="گسترش روز به روز محصولات کار گروهی مجرب و سخت کوش است"
             />
-            <Slider :active-product="activeProduct" :products="products" />
+            <Slider :activeProduct="activeProduct" :products="products" />
             <Categories
                 @change-active-category="changeActiveCategory"
                 :products="products"
                 :active-category="activeCategory"
             />
             <ProductsGrid
-                v-model:active-product="activeProduct"
+                v-model:activeProduct="activeProduct"
                 :products="filteredProductsByCategory"
             />
         </div>

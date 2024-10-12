@@ -163,7 +163,7 @@ onMounted(() => {
         </div>
 
         <span
-            class="flex items-center w-full overflow-hidden font-semibold text-white lg:text-lg max-lg:py-3 bg-primary lg:bg-transparent rounded-100 lg:rounded-none lg:text-3xl lg:w-1/2"
+            class="flex items-center w-full overflow-hidden font-semibold text-white max-lg:py-3 bg-primary lg:bg-transparent rounded-100 lg:rounded-none lg:text-3xl lg:w-1/2"
             :class="
                 direction == 'left'
                     ? 'justify-center lg:justify-start'
@@ -179,4 +179,8 @@ onMounted(() => {
 .image-shadow {
     box-shadow: 0px 0px 100px hsla(179, 79%, 45%, 0.038);
 }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> 696ca52b32115cbdbf7c5e54997c1e72d5b39873
