@@ -12,6 +12,11 @@ const { data: content } = useGetContent();
 
 // computed
 
+const x = computed(() => {
+    console.log(content.value);
+    return "";
+});
+
 const heroImages = computed(() => {
     if (content.value) {
         return content.value?.hero.images.map((item) => {
@@ -26,17 +31,10 @@ const heroImages = computed(() => {
 });
 
 const heroLogo = computed(() => {
-    if (content.value) {
-        return {
-            link: `${config.public.API_BASE_URL}/${content.value.body_logo.link}`,
-            alt: content.value.body_logo.link,
-        };
-    } else {
-        return {
-            link: "",
-            alt: "",
-        };
-    }
+    return {
+        link: `${config.public.API_BASE_URL}/${content.value?.body_logo.link}`,
+        alt: content.value?.body_logo.link,
+    };
 });
 </script>
 
@@ -44,6 +42,7 @@ const heroLogo = computed(() => {
     <header
         class="relative container h-full padding-main flex-center max-md:flex-col-reverse w-full md:gap-10 xl:gap-16 lg:w-[90%] pt-8"
     >
+        {{ x }}
         <div
             class="flex flex-col items-center w-full gap-4 lg:items-start md:w-1/2 xl:gap-8"
         >
@@ -66,16 +65,12 @@ const heroLogo = computed(() => {
             <div
                 class="flex items-center justify-center gap-3 lg:justify-start lg:gap-5 max-xl:mt-3"
             >
-                <button
-                    @click="
-                        vScrollTo.scrollTo('#about-us-section', {
-                            offset: -120,
-                        })
-                    "
+                <NuxtLink
+                    :to="{ name: 'contact-us' }"
                     class="whitespace-nowrap text-sm lg:text-[1rem] bg-gradient-to-r from-primary to-secondary px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-white"
                 >
-                    درباره ما
-                </button>
+                    ارتباط با ما
+                </NuxtLink>
 
                 <button
                     @click="
