@@ -1,20 +1,20 @@
 <script setup lang="ts">
-
 import useGetContent from "~/composables/api/useGetContent";
 
 const config = useRuntimeConfig();
 
-const { data : content } = useGetContent();
-
+const { data: content } = useGetContent();
 </script>
 
 <template>
-    <section>
+    <section id="leaders-section">
         <SectionTitle
             :title="content!.leaders.title"
             :description="content!.leaders.description"
         />
-        <div class="container padding-main w-[90%] flex-wrap flex justify-center gap-16 sm:gap-20 lg:gap-32 mt-20 md:mt-28">
+        <div
+            class="container padding-main w-[90%] flex-wrap flex justify-center gap-16 sm:gap-20 lg:gap-32 mt-20 md:mt-28"
+        >
             <LeaderCard
                 v-for="leader in content!.leaders.members"
                 :key="leader.id"
@@ -27,6 +27,4 @@ const { data : content } = useGetContent();
     </section>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

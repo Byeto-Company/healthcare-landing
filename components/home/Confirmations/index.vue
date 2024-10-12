@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 // imports
 
 import type { Confirmation } from "~/types/index";
@@ -15,49 +14,54 @@ const confirmations = ref<Confirmation[]>([
     {
         image: "/confirmation.png",
         text: "نام مدرک اینجا قرار میگیرد",
-        direction: "left"
+        direction: "left",
     },
     {
         image: "/confirmation.png",
         text: "نام مدرک اینجا قرار میگیرد",
-        direction: "right"
+        direction: "right",
     },
     {
         image: "/confirmation.png",
         text: "نام مدرک اینجا قرار میگیرد",
-        direction: "left"
+        direction: "left",
     },
     {
         image: "/confirmation.png",
         text: "نام مدرک اینجا قرار میگیرد",
-        direction: "right"
-    }
+        direction: "right",
+    },
 ]);
 
 // life-cycle
 
 onMounted(() => {
-
     setTimeout(() => {
         const tl = gsap.timeline();
 
-        tl.fromTo(".middle-line", { height: "0%" }, {
-            height: "100%", scrollTrigger: {
-                trigger: "#confirmations",
-                start: "40% bottom",
-                end: "bottom center",
-                scrub: true
+        tl.fromTo(
+            ".middle-line",
+            { height: "0%" },
+            {
+                height: "100%",
+                scrollTrigger: {
+                    trigger: "#confirmations",
+                    start: "40% bottom",
+                    end: "bottom center",
+                    scrub: true,
+                },
             }
-        });
+        );
     }, 100);
-
 });
-
 </script>
 
 <template>
-    <section class="w-full bg-pattern-hex">
-        <div id="confirmations" class="w-full flex flex-col items-center container py-[6.25rem]">
+    <section id="confirmations-section" class="w-full bg-pattern-hex">
+        <div
+            id="confirmations"
+            class="w-full flex flex-col items-center container py-[6.25rem]"
+        >
             <SectionTitle
                 :title="content!.certificates.title"
                 :description="content!.certificates.description"
@@ -66,17 +70,21 @@ onMounted(() => {
 
             <div class="relative min-h-[20rem] mt-28 w-full">
                 <span
-                    class="absolute top-0 p-5 -translate-x-1/2 z-higher size-14 flex-center left-1/2 rounded-360 bg-primary">
+                    class="absolute top-0 p-5 -translate-x-1/2 z-higher size-14 flex-center left-1/2 rounded-360 bg-primary"
+                >
                     <i class="text-2xl text-white fa-solid fa-medal"></i>
                 </span>
 
                 <span
-                    class="absolute top-0 w-[3px] rounded-full h-full -translate-x-1/2 bg-gray-800 left-1/2 z-high"></span>
+                    class="absolute top-0 w-[3px] rounded-full h-full -translate-x-1/2 bg-gray-800 left-1/2 z-high"
+                ></span>
                 <span
-                    class="middle-line absolute top-0 w-[4px] rounded-full h-full -translate-x-1/2 bg-primary left-1/2 z-high"></span>
+                    class="middle-line absolute top-0 w-[4px] rounded-full h-full -translate-x-1/2 bg-primary left-1/2 z-high"
+                ></span>
 
-                <div class="top-0 flex flex-col gap-10 py-24 mx-auto w-[90%] z-higher">
-
+                <div
+                    class="top-0 flex flex-col gap-10 py-24 mx-auto w-[90%] z-higher"
+                >
                     <ConfirmationRow
                         v-for="(confirmation, index) in content!.certificates.items"
                         :key="index"
@@ -85,15 +93,10 @@ onMounted(() => {
                         :text="confirmation.description"
                         :index="index + 1"
                     />
-
                 </div>
-
             </div>
-
         </div>
     </section>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
