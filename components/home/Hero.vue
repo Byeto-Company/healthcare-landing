@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 // imports
 
 import useGetContent from "~/composables/api/useGetContent";
@@ -12,11 +11,6 @@ const { $vScrollTo: vScrollTo } = useNuxtApp();
 const { data: content } = useGetContent();
 
 // computed
-
-const x = computed(() => {
-    console.log(content.value);
-    return "";
-});
 
 const heroImages = computed(() => {
     if (content.value) {
@@ -43,28 +37,18 @@ const heroLogo = computed(() => {
     <header
         class="relative container h-full padding-main flex-center max-md:flex-col-reverse w-full md:gap-10 xl:gap-16 lg:w-[90%] pt-8"
     >
-<<<<<<< HEAD
-        {{ x }}
         <div
             class="flex flex-col items-center w-full gap-4 lg:items-start md:w-1/2 xl:gap-8"
         >
             <div class="flex flex-col items-center lg:items-start">
-=======
-        <div class="flex items-center justify-center w-1/2">
-            <div
-                class="flex flex-col w-full gap-4 xl:gap-8"
-            >
-                <div class="flex flex-col items-center lg:items-start">
->>>>>>> 0845cbb263e701039924478bc8e31a58ea10caff
                 <span
                     class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold"
                 >
                     شرکت مهندسی
-                </span
+                </span>
+                <span
+                    class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold text-gradient bg-gradient-to-r from-primary to-secondary"
                 >
-                    <span
-                        class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold text-gradient bg-gradient-to-r from-primary to-secondary"
-                    >
                     {{ content?.hero.title }}
                 </span>
             </div>
@@ -83,21 +67,18 @@ const heroLogo = computed(() => {
                     ارتباط با ما
                 </NuxtLink>
 
-                    <button
-                        @click="
+                <button
+                    @click="
                         vScrollTo.scrollTo('#demo-section', { offset: -120 })
                     "
-                        class="whitespace-nowrap text-sm lg:text-[1rem] border-2 border-primary font-semibold px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-primary"
-                    >
-                        درخواست دمو
-                    </button>
-                </div>
+                    class="whitespace-nowrap text-sm lg:text-[1rem] border-2 border-primary font-semibold px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-primary"
+                >
+                    درخواست دمو
+                </button>
             </div>
         </div>
 
-        <div
-            class="flex items-center justify-center w-full md:w-1/2"
-        >
+        <div class="flex items-center justify-center w-full md:w-1/2">
             <div class="relative flex-center aspect-square size-[430px]">
                 <!-- top shapes -->
 
