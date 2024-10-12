@@ -50,16 +50,12 @@ const { data: content } = useGetContent();
                         درخواست دمو
                     </button>
 
-                    <button
-                        @click="
-                            vScrollTo.scrollTo('#about-us-section', {
-                                offset: -120,
-                            })
-                        "
+                    <NuxtLink
+                        :to="{ name: 'contact-us' }"
                         class="py-2.5 bg-white px-7 text-primary rounded-360 whitespace-nowrap"
                     >
-                        درباره ما
-                    </button>
+                        ارتباط با ما
+                    </NuxtLink>
                 </div>
             </div>
 
