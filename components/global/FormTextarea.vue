@@ -33,7 +33,7 @@ defineProps<Props>();
         <textarea
             @input="$emit('update:modelValue', $event.target.value)"
             :id="id"
-            class="w-full border resize-none p-4 outline-none h-[15rem] focus:border-primary transition-all focus:ring-2 focus:ring-offset-2 focus:ring-primary rounded-100"
+            class="w-full border resize-none p-4 outline-none h-[10rem] lg:h-[15rem] focus:border-primary transition-all focus:ring-2 focus:ring-offset-2 focus:ring-primary rounded-100"
             :class="{
                 '!border-red-700 !ring-red-700': validator?.$error,
                 'ring-offset-[#19191A] text-white bg-[#19191A] border-gray-600 focus:bg-[#25272A]':
