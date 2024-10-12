@@ -50,7 +50,7 @@ const heroLogo = computed(() => {
         >
             <div class="flex flex-col items-center lg:items-start">
 =======
-        <div class="flex justify-center items-center w-1/2">
+        <div class="flex items-center justify-center w-1/2">
             <div
                 class="flex flex-col w-full gap-4 xl:gap-8"
             >
@@ -67,7 +67,6 @@ const heroLogo = computed(() => {
                     >
                     {{ content?.hero.title }}
                 </span>
-<<<<<<< HEAD
             </div>
             <p
                 class="xl:text-xl text-center lg:text-start !leading-[175%] text-gray-800"
@@ -83,27 +82,6 @@ const heroLogo = computed(() => {
                 >
                     ارتباط با ما
                 </NuxtLink>
-=======
-                </div>
-                <p
-                    class="xl:text-xl text-center lg:text-start !leading-[175%] text-gray-800"
-                >
-                    {{ content?.hero.description }}
-                </p>
-                <div
-                    class="flex items-center justify-center gap-3 lg:justify-start lg:gap-5 max-xl:mt-3"
-                >
-                    <button
-                        @click="
-                        vScrollTo.scrollTo('#about-us-section', {
-                            offset: -120,
-                        })
-                    "
-                        class="whitespace-nowrap text-sm lg:text-[1rem] bg-gradient-to-r from-primary to-secondary px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-white"
-                    >
-                        درباره ما
-                    </button>
->>>>>>> 0845cbb263e701039924478bc8e31a58ea10caff
 
                     <button
                         @click="
