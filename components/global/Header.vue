@@ -49,17 +49,10 @@ const navLinks = ref<navLink[]>([
 const { data: content } = useGetContent();
 
 const logo = computed(() => {
-    if (content.value) {
-        return {
-            link: `${config.public.API_BASE_URL}/${content.value.logo.link}`,
-            alt: content.value.body_logo.link,
-        };
-    } else {
-        return {
-            link: "",
-            alt: "",
-        };
-    }
+    return {
+        link: `${config.public.API_BASE_URL}/${content.value?.logo.link}`,
+        alt: content.value?.body_logo.link,
+    };
 });
 
 // methods
