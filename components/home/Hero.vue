@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 // imports
 
 import useGetContent from "~/composables/api/useGetContent";
@@ -42,20 +43,31 @@ const heroLogo = computed(() => {
     <header
         class="relative container h-full padding-main flex-center max-md:flex-col-reverse w-full md:gap-10 xl:gap-16 lg:w-[90%] pt-8"
     >
+<<<<<<< HEAD
         {{ x }}
         <div
             class="flex flex-col items-center w-full gap-4 lg:items-start md:w-1/2 xl:gap-8"
         >
             <div class="flex flex-col items-center lg:items-start">
+=======
+        <div class="flex justify-center items-center w-1/2">
+            <div
+                class="flex flex-col w-full gap-4 xl:gap-8"
+            >
+                <div class="flex flex-col items-center lg:items-start">
+>>>>>>> 0845cbb263e701039924478bc8e31a58ea10caff
                 <span
                     class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold"
-                    >شرکت مهندسی</span
                 >
-                <span
-                    class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold text-gradient bg-gradient-to-r from-primary to-secondary"
+                    شرکت مهندسی
+                </span
                 >
+                    <span
+                        class="py-0.5 text-3xl xl:text-5xl !leading-[150%] font-bold text-gradient bg-gradient-to-r from-primary to-secondary"
+                    >
                     {{ content?.hero.title }}
                 </span>
+<<<<<<< HEAD
             </div>
             <p
                 class="xl:text-xl text-center lg:text-start !leading-[175%] text-gray-800"
@@ -71,20 +83,42 @@ const heroLogo = computed(() => {
                 >
                     ارتباط با ما
                 </NuxtLink>
+=======
+                </div>
+                <p
+                    class="xl:text-xl text-center lg:text-start !leading-[175%] text-gray-800"
+                >
+                    {{ content?.hero.description }}
+                </p>
+                <div
+                    class="flex items-center justify-center gap-3 lg:justify-start lg:gap-5 max-xl:mt-3"
+                >
+                    <button
+                        @click="
+                        vScrollTo.scrollTo('#about-us-section', {
+                            offset: -120,
+                        })
+                    "
+                        class="whitespace-nowrap text-sm lg:text-[1rem] bg-gradient-to-r from-primary to-secondary px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-white"
+                    >
+                        درباره ما
+                    </button>
+>>>>>>> 0845cbb263e701039924478bc8e31a58ea10caff
 
-                <button
-                    @click="
+                    <button
+                        @click="
                         vScrollTo.scrollTo('#demo-section', { offset: -120 })
                     "
-                    class="whitespace-nowrap text-sm lg:text-[1rem] border-2 border-primary font-semibold px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-primary"
-                >
-                    درخواست دمو
-                </button>
+                        class="whitespace-nowrap text-sm lg:text-[1rem] border-2 border-primary font-semibold px-8 xl:px-10 py-1.5 xl:py-2.5 rounded-360 text-primary"
+                    >
+                        درخواست دمو
+                    </button>
+                </div>
             </div>
         </div>
 
         <div
-            class="flex items-center justify-center w-full md:justify-end md:w-1/2"
+            class="flex items-center justify-center w-full md:w-1/2"
         >
             <div class="relative flex-center aspect-square size-[430px]">
                 <!-- top shapes -->
