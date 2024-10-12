@@ -1,6 +1,6 @@
 export const API_ENDPOINTS = {
     customer: {
-        getAll: "/customer/customer",
+        getAll: "/customer/customer/",
     },
     product: {
         get: "/product/detail",
