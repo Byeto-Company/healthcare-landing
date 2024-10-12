@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 // imports
 
 import useGetContent from "~/composables/api/useGetContent";
@@ -9,7 +8,7 @@ import useGetContent from "~/composables/api/useGetContent";
 const { data: content } = useGetContent();
 
 const products = computed(() => {
-    return content.value!.products;
+    return content.value?.products;
 });
 
 const activeProduct = ref(products.value[0]);
@@ -32,11 +31,6 @@ const changeActiveCategory = (id: string) => {
     activeCategory.value = id;
     activeProduct.value = filteredProductsByCategory.value[0];
 };
-
-watch(() => content.value, (n) => {
-    console.log(n, "--------");
-}, {immediate : true})
-
 </script>
 
 <template>
