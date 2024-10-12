@@ -67,7 +67,7 @@ const thumbnailUrl = computed(() => {
 
                     <span
                         class="text-xs font-medium xs:text-sm text-gradient bg-gradient-to-r from-secondary to-primary"
-                        >سیستم مدیریت اطلاعات بیمارستانی</span
+                        >{{ product?.category.parent.name }}</span
                     >
                 </div>
             </div>
@@ -78,7 +78,9 @@ const thumbnailUrl = computed(() => {
 
             <article class="flex flex-col w-full gap-16 lg:w-9/12">
                 <section class="flex flex-col gap-4">
-                    <div class="w-full h-[16rem] rounded-150 overflow-hidden">
+                    <div
+                        class="w-full h-[12rem] lg:h-[16rem] rounded-150 overflow-hidden"
+                    >
                         <NuxtImg
                             :src="thumbnailUrl"
                             alt="product-1"
