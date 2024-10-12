@@ -1,16 +1,15 @@
 <script setup lang="ts">
-
 // types
 
 type Props = {
     products: Product[];
-    
+
     activeCategory: string;
-}
+};
 
 type EmitProps = {
-    changeActiveCategory: [id: string]
-}
+    changeActiveCategory: [id: string];
+};
 
 // emits
 
@@ -22,8 +21,8 @@ const props = defineProps<Props>();
 
 const categories = computed(() => {
     const categoriesList: string[] = [];
-    const categories = props.products.map(product => product.category);
-    categories.forEach(category => {
+    const categories = props.products.map((product) => product.category);
+    categories.forEach((category) => {
         if (!categoriesList.includes(category.name)) {
             categoriesList.push(category.name);
         }
@@ -31,7 +30,6 @@ const categories = computed(() => {
 
     return categoriesList;
 });
-
 </script>
 
 <template>
@@ -39,29 +37,53 @@ const categories = computed(() => {
         <div
             class="w-full mt-16 mb-10 overflow-x-auto bg-gray-700/70 flex-center rounded-100"
         >
-            <div class="w-max flex-center ps-80 lg:gap-[6.25rem] gap-10 lg:px-[6.25rem]">
+            <div
+                class="w-max flex-center lg:ps-80 lg:gap-[6.25rem] gap-10 lg:px-[6.25rem]"
+            >
                 <button
                     class="relative h-full py-4 w-[4rem] text-xl text-white"
-                    @click="emit('changeActiveCategory','all')"
-                    :class="activeCategory === 'all' ? 'font-bold text-primary' : ''"
+                    @click="emit('changeActiveCategory', 'all')"
+                    :class="
+                        activeCategory === 'all' ? 'font-bold text-primary' : ''
+                    "
                 >
-                    <span :class="{'bg-gradient-to-r from-primary to-secondary text-gradient' : activeCategory === 'all'}">همه</span>
-                    <span v-if="activeCategory === 'all'"
-                        class="absolute bottom-0 block w-full h-1 rounded-360 bg-gradient-to-r from-primary to-secondary">
+                    <span
+                        :class="{
+                            'bg-gradient-to-r from-primary to-secondary text-gradient':
+                                activeCategory === 'all',
+                        }"
+                        class="text-[1rem]"
+                        >همه</span
+                    >
+                    <span
+                        v-if="activeCategory === 'all'"
+                        class="absolute bottom-0 block w-full h-1 rounded-360 bg-gradient-to-r from-primary to-secondary"
+                    >
                     </span>
                 </button>
                 <button
                     class="relative h-full py-4 min-w-[4rem] text-xl text-white"
                     v-for="(category, index) in categories"
                     :key="index"
-                    @click="emit('changeActiveCategory',category)"
-                    :class="activeCategory === category ? 'font-bold text-primary' : ''"
+                    @click="emit('changeActiveCategory', category)"
+                    :class="
+                        activeCategory === category
+                            ? 'font-bold text-primary'
+                            : ''
+                    "
                 >
                     <span
-                        :class="{'bg-gradient-to-r from-primary to-secondary text-gradient' : activeCategory === category}">{{ category
-                        }}</span>
-                    <span v-if="activeCategory === category"
-                        class="absolute bottom-0 block w-full h-1 rounded-360 bg-gradient-to-r from-primary to-secondary">
+                        :class="{
+                            'bg-gradient-to-r from-primary to-secondary text-gradient':
+                                activeCategory === category,
+                        }"
+                        class="text-[1rem]"
+                        >{{ category }}</span
+                    >
+                    <span
+                        v-if="activeCategory === category"
+                        class="absolute bottom-0 block w-full h-1 rounded-360 bg-gradient-to-r from-primary to-secondary"
+                    >
                     </span>
                 </button>
             </div>
@@ -69,6 +91,4 @@ const categories = computed(() => {
     </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
