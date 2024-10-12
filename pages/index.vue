@@ -4,7 +4,10 @@ import useGetContent from "~/composables/api/useGetContent";
 const { suspense } = useGetContent();
 
 onServerPrefetch(async () => {
-    await suspense();
+    console.log("asdasd");
+
+    const x = await suspense();
+    console.log(x);
 });
 </script>
 
