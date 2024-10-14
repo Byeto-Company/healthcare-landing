@@ -21,7 +21,7 @@ const slug = computed(() => route.params["slug"] as string);
 const { data: product, suspense } = useGetProduct(slug);
 
 onServerPrefetch(async () => {
-    await suspense();
+   await suspense();
 });
 
 // computed
@@ -33,11 +33,11 @@ const thumbnailUrl = computed(() => {
 
 <template>
     <section
-        class="w-full h-full flex flex-col container items-center gap-[4.25rem] min-h-[100svh]"
+        class="lg:pt-20 w-full h-full flex flex-col container items-center gap-[4.25rem] min-h-[100svh]"
     >
         <div class="w-full lg:-mt-10 padding-main flex-center mt-[40px]">
             <div
-                class="w-full h-[12rem] xs:h-[16rem] lg:h-[20rem] flex flex-col justify-center gap-6 xs:gap-10 bg-black rounded-150"
+                class="w-full h-[12rem] xs:h-[16rem] lg:h-[20rem] flex flex-col justify-center gap-6 xs:gap-10 bg-pattern-hex rounded-150"
             >
                 <div class="w-full gap-8 flex-center h-max">
                     <img
@@ -67,7 +67,7 @@ const thumbnailUrl = computed(() => {
 
                     <span
                         class="text-xs font-medium xs:text-sm text-gradient bg-gradient-to-r from-secondary to-primary"
-                        >{{ product?.category.parent.name }}</span
+                        >{{ product?.category.name }}</span
                     >
                 </div>
             </div>
@@ -85,7 +85,7 @@ const thumbnailUrl = computed(() => {
                             :src="thumbnailUrl"
                             alt="product-1"
                             densities="x1 x2"
-                            class="object-fill size-full"
+                            class="object-cover size-full"
                         />
                     </div>
 
@@ -96,7 +96,7 @@ const thumbnailUrl = computed(() => {
 
                 <section class="flex flex-col gap-4">
                     <div
-                        class="w-full px-6 py-5 bg-white [box-shadow:_0px_0px_10px_#00000020] rounded-100"
+                        class="w-full px-6 py-5 bg-white border-b"
                     >
                         <span
                             class="font-bold text-gradient bg-gradient-to-r from-secondary to-primary"
@@ -123,7 +123,7 @@ const thumbnailUrl = computed(() => {
 
                 <section class="flex flex-col gap-4">
                     <div
-                        class="w-full px-6 py-5 bg-white [box-shadow:_0px_0px_10px_#00000020] rounded-100"
+                        class="w-full px-6 py-5 bg-white border-b"
                     >
                         <span
                             class="font-bold text-gradient bg-gradient-to-r from-secondary to-primary"
@@ -142,7 +142,7 @@ const thumbnailUrl = computed(() => {
                         >
                             <NuxtImg
                                 src="/check.svg"
-                                class="shrink-0 size-6 xs:size-9"
+                                class="shrink-0 size-6 xs:size-7"
                             />
                             <span class="text-sm font-medium text-gray-500">
                                 {{ capability }}

@@ -5,7 +5,7 @@
 <template>
     <section class="mt-12">
         <SectionTitle
-            title="حوزه کاری خورشید رایان طلوع"
+            title="حوزه کاری خورش2ید رایان طلوع"
             description="در این قسمت با حوزه های فعالیت شرکت آشنا میشوید و شناختی کامل از تمامی خدمات شرکت و تیم قدرتمند ما پیدا میکنید"
         />
         <div class="container padding-main flex max-md:flex-wrap justify-center gap-12 md:gap-8 lg:gap-16 mt-20 md:mt-28">

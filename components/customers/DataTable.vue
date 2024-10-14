@@ -27,17 +27,17 @@ const customersList = computed(() => {
                 {{ customer.name }}
             </div>
         </th>
-        <th class="w-1/4 py-0.5">
+        <th class="w-1/4 py-0.5 px-6">
             <div class="flex py-5 font-medium text-black/50">
                 {{ customer.corporate_date }}
             </div>
         </th>
-        <th class="w-1/4 py-0.5">
+        <th class="w-1/4 py-0.5 px-6">
             <div class="flex py-5 font-medium text-black/50">
                 {{ customer.name }}
             </div>
         </th>
-        <th class="w-1/4 py-0.5">
+        <th class="w-1/4 py-0.5 px-6">
             <div class="flex justify-center py-5 font-medium text-black/50">
                 {{ customer.city }}
             </div>

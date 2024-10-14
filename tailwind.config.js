@@ -34,7 +34,8 @@ module.exports = {
                 "main": "0px 0px 80px hsl(var(--color-primary-200))"
             },
             backgroundImage: {
-                "pattern-hex": "url('/pattern-hex.jpg')"
+                "pattern-hex": "url('/pattern-hex.jpg')",
+                "pattern-hex-light": "url('/pattern-hex-light.jpg')"
             },
             colors: {
                 primary: {
