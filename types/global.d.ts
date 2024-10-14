@@ -35,6 +35,12 @@ declare global {
         }[];
     }
 
+    type NavbarItem = {
+        id: number,
+        link: string,
+        name: string
+    }
+
     type Product = {
         id: number,
         name: string,
@@ -104,8 +110,7 @@ declare global {
         description: string;
         address: string;
         socials: {
-            icon: string,
-            alt: string,
+            soical: string,
             link: string
         }[];
         emails: string[];
@@ -134,6 +139,11 @@ declare global {
             alt: string,
             link: string
         },
+        nav_links: {
+            id: number,
+            name: string,
+            link: string
+        }[],
         body_logo: {
             alt: string,
             link: string
@@ -155,10 +165,10 @@ declare global {
                 ordering: number
             }[]
         },
-        states : {
-            id : number,
-            name : string,
-            customer_count : number
+        states: {
+            id: number,
+            name: string,
+            customer_count: number
         }[],
         leaders: {
             title: string,
@@ -217,15 +227,13 @@ declare global {
             title: string,
             description: string,
             address: string,
-            social: {
-                icon: string,
-                alt: string,
+            socials: {
+                soical: string,
                 link: string
             }[],
             copyright: string,
             emails: string[],
             phones: string[],
-            socials: string[],
         },
     }
 }

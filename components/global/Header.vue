@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import useGetContent from "~/composables/api/useGetContent";
-
-// types
-
-interface navLink {
-    title: string;
-    path: string;
-}
+import { SymbolKind } from "vscode-languageserver-types";
+import Array = SymbolKind.Array;
 
 // state
 
@@ -17,33 +12,6 @@ const { $vScrollTo: vScrollTo } = useNuxtApp();
 
 const isDrawerShow = ref<boolean>(false);
 
-const navLinks = ref<navLink[]>([
-    {
-        title: "حوزه های کاری",
-        path: "#work-fields-section",
-    },
-    {
-        title: "محصولات",
-        path: "#products-section",
-    },
-    {
-        title: "مدیران",
-        path: "#leaders-section",
-    },
-    {
-        title: "تایید نامه ها",
-        path: "#confirmations-section",
-    },
-    {
-        title: "دمو",
-        path: "#demo-section",
-    },
-    {
-        title: "درباره ما",
-        path: "#about-us-section",
-    },
-]);
-
 // queries
 
 const { data: content } = useGetContent();
@@ -51,8 +19,48 @@ const { data: content } = useGetContent();
 const logo = computed(() => {
     return {
         link: `${config.public.API_BASE_URL}/${content.value?.logo.link}`,
-        alt: content.value?.body_logo.link,
+        alt: content.value?.body_logo.link
     };
+});
+
+const navLinks = computed(() => {
+    const links = content.value!.nav_links.map(navLink => ({
+        title: navLink.name,
+        path: navLink.link
+    }));
+
+    const staticLinks = [
+        {
+            title: "حوزه های کاری",
+            path: "/#work-fields-section"
+        },
+        {
+            title: "محصولات",
+            path: "/#products-section"
+        },
+        {
+            title: "مدیران",
+            path: "/#leaders-section"
+        },
+        {
+            title: "تایید نامه ها",
+            path: "/#confirmations-section"
+        },
+        {
+            title: "دمو",
+            path: "/#demo-section"
+        },
+        {
+            title: "درباره ما",
+            path: "/#about-us-section"
+        },
+        {
+            title: "مشتریان",
+            path: "/customers"
+        }
+    ];
+
+    return staticLinks.concat(links);
 });
 
 // methods
@@ -87,22 +95,32 @@ onMounted(() => {
             <div
                 class="flex items-center justify-start w-11/12 gap-[3rem] max-lg:hidden"
             >
-                <NuxtLink
+                <template
                     v-for="(link, index) in navLinks"
                     :key="index"
-                    :class="{
-                        'text-primary font-semibold': route.hash == link.path,
-                    }"
-                    class="transition-all cursor-pointer whitespace-nowrap"
-                    @click="goToSection(link)"
                 >
-                    {{ link.title }}
-                </NuxtLink>
 
-                <a href="/customers"> مشتریان </a>
+                    <NuxtLink
+                        v-if="link.path.startsWith('#')"
+                        :class="{'text-primary font-semibold': route.hash == link.path}"
+                        class="transition-all cursor-pointer whitespace-nowrap"
+                        link
+                    >
+                        {{ link.title }}
+                    </NuxtLink>
+
+                    <a
+                        v-else
+                        class="transition-all cursor-pointer whitespace-nowrap"
+                        :href="link.path"
+                    >
+                        {{ link.title }}
+                    </a>
+
+                </template>
             </div>
 
-            <div @click="isDrawerShow = true" class="lg:hidden">
+            <div @click="isDrawerShow = true" class="lg:hidden cursor-pointer">
                 <i class="fa-solid fa-bars text-[26px]"></i>
             </div>
 
