@@ -23,6 +23,51 @@ export default defineNuxtConfig({
         },
     },
 
+    pwa: {
+        manifest: {
+            name: "Health Care",
+            short_name: "Health Care",
+            description: "Health Care",
+            theme_color: "#5281e0",
+            icons: [
+                {
+                    src: "/icons/pwa-64x64.png",
+                    sizes: "64x64",
+                    type: "image/png",
+                },
+                {
+                    src: "/icons/pwa-192x192.png",
+                    sizes: "192x192",
+                    type: "image/png",
+                },
+                {
+                    src: "/icons/pwa-512x512.png",
+                    sizes: "512x512",
+                    type: "image/png",
+                },
+                {
+                    src: "/icons/maskable-icon-512x512.png",
+                    sizes: "512x512",
+                    type: "image/png",
+                    purpose: "maskable",
+                },
+                {
+                    src: "/icons/apple-touch-icon-180x180.png",
+                    sizes: "180x180",
+                    type: "image/png",
+                    purpose: "any",
+                },
+            ],
+        },
+        workbox: {
+            navigateFallback: "/",
+        },
+        devOptions: {
+            enabled: true,
+            type: "module",
+        },
+    },
+
     css: [
         "swiper/css",
         "~/assets/css/tailwind.css",
@@ -56,5 +101,5 @@ export default defineNuxtConfig({
 
     plugins: ["~/plugins/tanstack.ts"],
 
-    modules: ["@nuxt/image"],
+    modules: ["@nuxt/image", "@vite-pwa/nuxt"],
 });
