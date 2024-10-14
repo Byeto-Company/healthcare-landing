@@ -19,45 +19,45 @@ const { data: content } = useGetContent();
 const logo = computed(() => {
     return {
         link: `${config.public.API_BASE_URL}/${content.value?.logo.link}`,
-        alt: content.value?.body_logo.link
+        alt: content.value?.body_logo.link,
     };
 });
 
 const navLinks = computed(() => {
-    const links = content.value!.nav_links.map(navLink => ({
+    const links = content.value!.nav_links.map((navLink) => ({
         title: navLink.name,
-        path: navLink.link
+        path: navLink.link,
     }));
 
     const staticLinks = [
         {
             title: "حوزه های کاری",
-            path: "/#work-fields-section"
+            path: "#work-fields-section",
         },
         {
             title: "محصولات",
-            path: "/#products-section"
+            path: "#products-section",
         },
         {
             title: "مدیران",
-            path: "/#leaders-section"
+            path: "#leaders-section",
         },
         {
             title: "تایید نامه ها",
-            path: "/#confirmations-section"
+            path: "#confirmations-section",
         },
         {
             title: "دمو",
-            path: "/#demo-section"
+            path: "#demo-section",
         },
         {
             title: "درباره ما",
-            path: "/#about-us-section"
+            path: "#about-us-section",
         },
         {
             title: "مشتریان",
-            path: "/customers"
-        }
+            path: "/customers",
+        },
     ];
 
     return staticLinks.concat(links);
@@ -95,32 +95,30 @@ onMounted(() => {
             <div
                 class="flex items-center justify-start w-11/12 gap-[3rem] max-lg:hidden"
             >
-                <template
-                    v-for="(link, index) in navLinks"
-                    :key="index"
-                >
-
+                <template v-for="(link, index) in navLinks" :key="index">
                     <NuxtLink
                         v-if="link.path.startsWith('#')"
-                        :class="{'text-primary font-semibold': route.hash == link.path}"
+                        :class="{
+                            'text-primary font-semibold':
+                                route.hash == link.path,
+                        }"
                         class="transition-all cursor-pointer whitespace-nowrap"
-                        link
+                        @click="goToSection(link)"
                     >
                         {{ link.title }}
                     </NuxtLink>
 
-                    <a
+                    <NuxtLink
                         v-else
                         class="transition-all cursor-pointer whitespace-nowrap"
                         :href="link.path"
                     >
                         {{ link.title }}
-                    </a>
-
+                    </NuxtLink>
                 </template>
             </div>
 
-            <div @click="isDrawerShow = true" class="lg:hidden cursor-pointer">
+            <div @click="isDrawerShow = true" class="cursor-pointer lg:hidden">
                 <i class="fa-solid fa-bars text-[26px]"></i>
             </div>
 
