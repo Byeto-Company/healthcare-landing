@@ -112,7 +112,7 @@ const handleSubmit = () => {
 
 <template>
     <section
-        class="w-full h-full flex flex-col items-center justify-center relative gap-[6.25rem] min-h-[100svh]"
+        class="w-full h-full flex flex-col items-center justify-center relative gap-[6.25rem] min-h-[100svh] pt-[10vh] lg:pt-[15vh]"
     >
         <!-- orbs -->
         <div
@@ -130,7 +130,9 @@ const handleSubmit = () => {
                 description="گسترش روز به روز محصولات کار گروهی مجرب و سخت کوش است"
             />
 
-            <form class="grid grid-cols-3 gap-10 w-[70%] mt-20">
+            <form
+                class="grid grid-cols-1 lg:grid-cols-3 gap-10 w-full px-5 lg:w-[70%] mt-10 lg:mt-20"
+            >
                 <FormInput
                     label="نام و نام خانوادگی"
                     v-model="contactUsInfo.full_name"
