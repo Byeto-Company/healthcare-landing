@@ -235,5 +235,10 @@ declare global {
             emails: string[];
             phones: string[];
         };
+        meta: {
+            title: string;
+            keywords: string;
+            description: string;
+        };
     };
 }
