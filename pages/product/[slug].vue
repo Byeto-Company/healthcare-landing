@@ -1,8 +1,4 @@
 <script setup lang="ts">
-// meta
-
-useSeoMeta({});
-
 // imports
 
 import useGetProduct from "~/composables/api/product/useGetProduct";
@@ -28,6 +24,16 @@ onServerPrefetch(async () => {
 
 const thumbnailUrl = computed(() => {
     return `${config.public.API_BASE_URL}/${product.value?.thumbnail}`;
+});
+
+// meta
+
+useHead({
+    title: product.value?.meta.title,
+    meta: [
+        { name: "description", content: product.value?.meta.description },
+        { name: "keywords", content: product.value?.meta.keywords },
+    ],
 });
 </script>
 
