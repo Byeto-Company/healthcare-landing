@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import useGetProduct from "~/composables/api/product/useGetProduct";
+
 // types
 
 type Props = {
@@ -16,13 +18,13 @@ type Props = {
 
 // emit
 
-defineEmits(["update:currentAccordionId"]);
+const emit = defineEmits(["update:currentAccordionId"]);
 
 // props
 
 const props = defineProps<Props>();
 
-const { currentAccordionId, id } = toRefs(props);
+const { currentAccordionId, id, items } = toRefs(props);
 
 // state
 
@@ -31,12 +33,24 @@ const route = useRoute();
 // computed
 
 const isActive = computed(() => currentAccordionId.value == id.value);
+
+const slug = computed(() => route.params["slug"] as string);
+
+// life-cycle
+
+onMounted(() => {
+    const activeProduct = items.value.find((item) => item.slug === slug.value);
+
+    if (activeProduct) {
+        emit("update:currentAccordionId", id.value);
+    }
+});
 </script>
 
 <template>
     <div>
         <button
-            @click="$emit('update:currentAccordionId', isActive ? null : id)"
+            @click="emit('update:currentAccordionId', isActive ? null : id)"
             type="button"
             :class="index != 1 ? 'border-t border-gray-200' : ''"
             class="flex items-center justify-between w-full gap-3 py-4 font-medium text-gray-500"

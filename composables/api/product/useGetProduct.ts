@@ -34,6 +34,11 @@ export type GetProductResponse = {
             slug: string;
         }[];
     }[];
+    meta: {
+        title: string;
+        keywords: string;
+        description: string;
+    };
 };
 
 type GetProductRequest = {

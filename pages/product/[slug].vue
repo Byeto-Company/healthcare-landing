@@ -1,8 +1,4 @@
 <script setup lang="ts">
-// meta
-
-useSeoMeta({});
-
 // imports
 
 import useGetProduct from "~/composables/api/product/useGetProduct";
@@ -21,13 +17,23 @@ const slug = computed(() => route.params["slug"] as string);
 const { data: product, suspense } = useGetProduct(slug);
 
 onServerPrefetch(async () => {
-   await suspense();
+    await suspense();
 });
 
 // computed
 
 const thumbnailUrl = computed(() => {
     return `${config.public.API_BASE_URL}/${product.value?.thumbnail}`;
+});
+
+// meta
+
+useHead({
+    title: product.value?.meta.title,
+    meta: [
+        { name: "description", content: product.value?.meta.description },
+        { name: "keywords", content: product.value?.meta.keywords },
+    ],
 });
 </script>
 
@@ -95,9 +101,7 @@ const thumbnailUrl = computed(() => {
                 </section>
 
                 <section class="flex flex-col gap-4">
-                    <div
-                        class="w-full px-6 py-5 bg-white border-b"
-                    >
+                    <div class="w-full px-6 py-5 bg-white border-b">
                         <span
                             class="font-bold text-gradient bg-gradient-to-r from-secondary to-primary"
                         >
@@ -122,9 +126,7 @@ const thumbnailUrl = computed(() => {
                 </section>
 
                 <section class="flex flex-col gap-4">
-                    <div
-                        class="w-full px-6 py-5 bg-white border-b"
-                    >
+                    <div class="w-full px-6 py-5 bg-white border-b">
                         <span
                             class="font-bold text-gradient bg-gradient-to-r from-secondary to-primary"
                         >
@@ -132,7 +134,9 @@ const thumbnailUrl = computed(() => {
                         </span>
                     </div>
 
-                    <div class="flex flex-col gap-8 pr-5 mt-1">
+                    <div
+                        class="grid grid-cols-1 gap-8 pr-5 mt-1 md:grid-cols-3 lg:grid-cols-5"
+                    >
                         <span
                             v-for="(
                                 capability, index
@@ -142,7 +146,7 @@ const thumbnailUrl = computed(() => {
                         >
                             <NuxtImg
                                 src="/check.svg"
-                                class="shrink-0 size-6 xs:size-7"
+                                class="shrink-0 size-6 xs:size-7 lg:size-9"
                             />
                             <span class="text-sm font-medium text-gray-500">
                                 {{ capability }}

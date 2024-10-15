@@ -4,6 +4,7 @@ import { VueQueryDevtools } from "@tanstack/vue-query-devtools";
 
 <template>
     <NuxtLayout>
+        <NuxtPwaManifest />
         <NuxtPage />
         <VueQueryDevtools />
     </NuxtLayout>

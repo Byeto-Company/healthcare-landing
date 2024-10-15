@@ -2,7 +2,6 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-
 ## Setup
 
 Make sure to install the dependencies:
@@ -72,5 +71,13 @@ yarn preview
 # bun
 bun run preview
 ```
+
+## api url config
+
+make sure to change the api url in 3 files
+
+1. .env as API_BASE_URL
+2. the static url in nuxt.config.ts
+3. config folder in root > axios.config.ts
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

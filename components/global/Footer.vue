@@ -10,7 +10,6 @@ const { $vScrollTo: vScrollTo } = useNuxtApp();
 // queries
 
 const { data: content } = useGetContent();
-
 </script>
 
 <template>
@@ -76,9 +75,14 @@ const { data: content } = useGetContent();
                         </p>
                     </div>
                     <div class="flex items-center gap-8 max-md:justify-center">
-                        <a v-for="link in content?.nav_links" :href="link.link" class="text-gray-200">
+                        <NuxtLink
+                            v-for="(link, index) in content?.nav_links"
+                            :key="index"
+                            :to="link.link"
+                            class="text-gray-200"
+                        >
                             {{ link.name }}
-                        </a>
+                        </NuxtLink>
                     </div>
                 </div>
 
@@ -91,7 +95,8 @@ const { data: content } = useGetContent();
                         <span class="text-primary">ایمیل</span>
                         <span
                             class="text-gray-300"
-                            v-for="email in content?.footer.emails"
+                            v-for="(email, index) in content?.footer.emails"
+                            :key="index"
                         >
                             {{ email }}
                         </span>
@@ -120,21 +125,25 @@ const { data: content } = useGetContent();
                 </p>
 
                 <div class="flex items-center gap-7">
-                    <a v-for="social in content?.footer.socials" :href="social.link">
+                    <a
+                        v-for="(social, index) in content?.footer.socials"
+                        :key="index"
+                        :href="social.link"
+                    >
                         <i
                             class="text-2xl text-gray-500 fa-brands"
                             :class="{
-                                'fa-whatsapp' : social.soical === 'واتساپ',
-                                'fa-instagram' : social.soical === 'اینستاگرام',
-                                'fa-telegram' : social.soical === 'تلگرام',
-                                'fa-twitter' : social.soical === 'تویتر',
+                                'fa-whatsapp': social.soical === 'واتساپ',
+                                'fa-instagram': social.soical === 'اینستاگرام',
+                                'fa-telegram': social.soical === 'تلگرام',
+                                'fa-twitter': social.soical === 'تویتر',
                             }"
                         ></i>
                     </a>
 
-<!--                    <i class="text-2xl text-gray-500 fa-brands fa-instagram"></i>-->
-<!--                    <i class="text-2xl text-gray-500 fa-brands fa-telegram"></i>-->
-<!--                    <i class="text-2xl text-gray-500 fa-brands fa-twitter"></i>-->
+                    <!--                    <i class="text-2xl text-gray-500 fa-brands fa-instagram"></i>-->
+                    <!--                    <i class="text-2xl text-gray-500 fa-brands fa-telegram"></i>-->
+                    <!--                    <i class="text-2xl text-gray-500 fa-brands fa-twitter"></i>-->
                 </div>
             </div>
         </div>
