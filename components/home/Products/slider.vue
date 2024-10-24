@@ -85,7 +85,9 @@ watch(
             </button>
         </div>
         <div class="flex flex-col items-center justify-center gap-5 py-2">
-            <span class="text-3xl font-bold text-white">
+            <span
+                class="text-2xl font-bold text-center text-white max-w-[60rem] leading-[200%]"
+            >
                 {{
                     swiperInstance &&
                     activeProduct?.slides_list[swiperInstance.activeIndex]
