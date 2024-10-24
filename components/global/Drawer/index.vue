@@ -68,21 +68,39 @@ const scrollTo = (link: { title: string; path: string }) => {
                     }"
                 >
                     <div class="flex flex-col py-3 divide-y gap-y-1">
-                        <button
+                        <template
                             v-for="(link, index) in navLinks"
                             :key="index"
-                            @click="scrollTo(link)"
-                            class="flex items-center w-full gap-3 py-3 text-right"
                         >
-                            <i
-                                class="mr-2 font-semibold fa-solid fa-minus text-gradient bg-gradient-to-r from-secondary to-primary"
-                            ></i>
-                            <p
-                                class="text-sm font-semibold text-black dark:text-white"
+                            <button
+                                v-if="link.path.startsWith('#')"
+                                @click="scrollTo(link)"
+                                class="flex items-center w-full gap-3 py-3 text-right"
                             >
-                                {{ link.title }}
-                            </p>
-                        </button>
+                                <i
+                                    class="mr-2 font-semibold fa-solid fa-minus text-gradient bg-gradient-to-r from-secondary to-primary"
+                                ></i>
+                                <p
+                                    class="text-sm font-semibold text-black dark:text-white"
+                                >
+                                    {{ link.title }}
+                                </p>
+                            </button>
+                            <NuxtLink
+                                v-else
+                                class="flex items-center w-full gap-3 py-3 text-right"
+                                :href="link.path"
+                            >
+                                <i
+                                    class="mr-2 font-semibold fa-solid fa-minus text-gradient bg-gradient-to-r from-secondary to-primary"
+                                ></i>
+                                <p
+                                    class="text-sm font-semibold text-black dark:text-white"
+                                >
+                                    {{ link.title }}
+                                </p>
+                            </NuxtLink>
+                        </template>
                     </div>
                 </div>
             </div>
