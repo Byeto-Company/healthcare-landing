@@ -58,10 +58,10 @@ useHead({
     >
         <!-- orbs -->
         <div
-            class="size-[200px] z-lowest bg-primary/80 blur-[150px] absolute top-1/2 -left-10 -translate-y-1/2"
+            class="size-[200px] z-lowest hidden lg:block bg-primary/80 blur-[150px] absolute top-1/2 -left-10 -translate-y-1/2"
         ></div>
         <div
-            class="size-[200px] z-lowest bg-secondary/80 blur-[150px] absolute top-1/2 -right-10 -translate-y-1/2"
+            class="size-[200px] z-lowest hidden lg:block bg-secondary/80 blur-[150px] absolute top-1/2 -right-10 -translate-y-1/2"
         ></div>
 
         <div
@@ -72,63 +72,67 @@ useHead({
                 :description="sectionTitle.description"
             />
 
-            <div
-                class="flex items-center w-full pb-8 overflow-auto md:justify-center ps-2 pe-8"
-            >
-                <table
-                    class="w-[70%] mt-20 rounded-200 [box-shadow:_0px_0px_20px_#00000010] z-higher"
+            <div class="w-full px-5 lg:px-5">
+                <div
+                    class="flex items-center w-full pb-8 overflow-auto md:justify-center ps-2 pe-8"
                 >
-                    <thead>
-                        <tr>
-                            <th class="w-1/4 py-0.5 ps-8">
-                                <div class="flex items-center gap-3 py-5">
-                                    <i
-                                        class="text-black fa-solid fa-hospital"
-                                    ></i>
-                                    <span
-                                        class="font-semibold text-black whitespace-nowrap"
-                                        >نام بیمارستان همکار</span
+                    <table
+                        class="w-[70%] mt-10 lg:mt-20 rounded-200 [box-shadow:_0px_0px_20px_#00000010] z-higher"
+                    >
+                        <thead>
+                            <tr>
+                                <th class="w-1/4 py-0.5 ps-8">
+                                    <div class="flex items-center gap-3 py-5">
+                                        <i
+                                            class="text-black fa-solid fa-hospital"
+                                        ></i>
+                                        <span
+                                            class="text-sm font-semibold lg:text-[1rem] text-black whitespace-nowrap"
+                                            >نام بیمارستان همکار</span
+                                        >
+                                    </div>
+                                </th>
+                                <th class="w-1/4 py-0.5 px-6">
+                                    <div class="flex items-center gap-3 py-5">
+                                        <i
+                                            class="text-black fa-solid fa-calendar-days"
+                                        ></i>
+                                        <span
+                                            class="text-sm font-semibold lg:text-[1rem] text-black whitespace-nowrap"
+                                            >تاریخ شروع همکاری</span
+                                        >
+                                    </div>
+                                </th>
+                                <th class="w-1/4 py-0.5 px-6">
+                                    <div class="flex items-center gap-3 py-5">
+                                        <i
+                                            class="text-black fa-solid fa-cube"
+                                        ></i>
+                                        <span
+                                            class="text-sm font-semibold lg:text-[1rem] text-black whitespace-nowrap"
+                                            >نام نرم افزار</span
+                                        >
+                                    </div>
+                                </th>
+                                <th class="w-1/4 py-0.5 px-6">
+                                    <div
+                                        class="flex items-center justify-center gap-3 py-5"
                                     >
-                                </div>
-                            </th>
-                            <th class="w-1/4 py-0.5 px-6">
-                                <div class="flex items-center gap-3 py-5">
-                                    <i
-                                        class="text-black fa-solid fa-calendar-days"
-                                    ></i>
-                                    <span
-                                        class="font-semibold text-black whitespace-nowrap"
-                                        >تاریخ شروع همکاری</span
-                                    >
-                                </div>
-                            </th>
-                            <th class="w-1/4 py-0.5 px-6">
-                                <div class="flex items-center gap-3 py-5">
-                                    <i class="text-black fa-solid fa-cube"></i>
-                                    <span
-                                        class="font-semibold text-black whitespace-nowrap"
-                                        >نام نرم افزار</span
-                                    >
-                                </div>
-                            </th>
-                            <th class="w-1/4 py-0.5 px-6">
-                                <div
-                                    class="flex items-center justify-center gap-3 py-5"
-                                >
-                                    <i
-                                        class="text-black fa-solid fa-location-dot"
-                                    ></i>
-                                    <span
-                                        class="font-semibold text-black whitespace-nowrap"
-                                        >محل بیمارستان</span
-                                    >
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
+                                        <i
+                                            class="text-black fa-solid fa-location-dot"
+                                        ></i>
+                                        <span
+                                            class="text-sm font-semibold lg:text-[1rem] text-black whitespace-nowrap"
+                                            >محل بیمارستان</span
+                                        >
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
 
-                    <DataTable />
-                </table>
+                        <DataTable />
+                    </table>
+                </div>
             </div>
 
             <AddMoreButton />
