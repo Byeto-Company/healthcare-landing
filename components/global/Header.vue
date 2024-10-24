@@ -104,13 +104,13 @@ onMounted(() => {
                         {{ link.title }}
                     </NuxtLink>
 
-                    <NuxtLink
+                    <a
                         v-else
                         class="transition-all cursor-pointer whitespace-nowrap"
                         :href="link.path"
                     >
                         {{ link.title }}
-                    </NuxtLink>
+                    </a>
                 </template>
             </div>
 
