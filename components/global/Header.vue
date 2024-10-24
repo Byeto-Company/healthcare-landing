@@ -18,7 +18,7 @@ const { data: content } = useGetContent();
 
 const logo = computed(() => {
     return {
-        link: `${config.public.API_BASE_URL}/${content.value?.logo.link}`,
+        link: `${config.public.API_BASE_URL}${content.value?.logo.link}`,
         alt: content.value?.body_logo.link,
     };
 });
@@ -98,12 +98,8 @@ onMounted(() => {
                 <template v-for="(link, index) in navLinks" :key="index">
                     <NuxtLink
                         v-if="link.path.startsWith('#')"
-                        :class="{
-                            'text-primary font-semibold':
-                                route.hash == link.path,
-                        }"
                         class="transition-all cursor-pointer whitespace-nowrap"
-                        @click="goToSection(link)"
+                        :to="{ name: 'index', hash: link.path }"
                     >
                         {{ link.title }}
                     </NuxtLink>
