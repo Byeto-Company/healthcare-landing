@@ -1,8 +1,7 @@
 import axiosOriginal from "axios";
 
 const axios = axiosOriginal.create({
-    baseURL: "https://hcareapi.liara.run",
-    timeout: 20000,
+    baseURL: "http://38.54.84.112:8000",
     timeoutErrorMessage: "خطای سرور",
     headers: {
         "Content-Type": "application/json",
