@@ -35,7 +35,7 @@ const heroLogo = computed(() => {
 
 <template>
     <header
-        class="relative container h-[calc(100svh-80px)] padding-main flex-center max-md:flex-col-reverse w-full md:gap-10 xl:gap-16 lg:w-[90%]"
+        class="relative container h-[calc(100svh-80px)] padding-main flex-center max-md:flex-col-reverse w-full pt-36 lg:pt-0 md:gap-10 xl:gap-16 lg:w-[90%]"
     >
         <div
             class="flex flex-col items-center w-full gap-4 lg:items-start md:w-1/2 xl:gap-8"
