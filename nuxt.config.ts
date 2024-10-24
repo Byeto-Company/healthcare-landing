@@ -4,20 +4,20 @@ export default defineNuxtConfig({
 
     ssr: true,
 
-    routeRules: {
-        "/": {
-            swr: 3600
-        },
-        "/contact-us": {
-            swr: 3600
-        },
-        "/customers": {
-            swr: 3600
-        },
-        "/product/**": {
-            swr: 3600
-        }
-    },
+    // routeRules: {
+    //     "/": {
+    //         swr: 300,
+    //     },
+    //     "/contact-us": {
+    //         swr: 300,
+    //     },
+    //     "/customers": {
+    //         swr: 300,
+    //     },
+    //     "/product/**": {
+    //         swr: 300,
+    //     },
+    // },
 
     app: {
         head: {
@@ -108,7 +108,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             API_BASE_URL:
-                process.env.API_BASE_URL ?? "https://hcareapi.liara.run",
+                process.env.API_BASE_URL ?? "http://38.54.84.112:8000",
         },
     },
 
