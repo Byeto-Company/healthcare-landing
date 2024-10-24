@@ -2,14 +2,13 @@
 import type { NuxtError } from "#app";
 
 const props = defineProps({
-    error: Object as () => NuxtError
+    error: Object as () => NuxtError,
 });
 
 const handleError = async () => {
     await clearError();
-    navigateTo("/")
-}
-
+    navigateTo("/");
+};
 
 const errorMessage = computed(() => {
     switch (props.error?.statusCode) {
@@ -18,17 +17,17 @@ const errorMessage = computed(() => {
         case 403:
             return "شما دسترسی لازم برای مشاهده این صفحه را ندارید. لطفاً با مدیریت سایت تماس بگیرید یا مجوزهای خود را بررسی کنید";
         case 500:
-            return "یک خطای داخلی سمت سرور رخ داده است. لطفاً چند لحظه بعد دوباره تلاش کنید یا با پشتیبانی سایت تماس بگیرید";
+            return "خطای داخلی سمت سرور رخ داده است. لطفاً چند لحظه بعد دوباره تلاش کنید یا با پشتیبانی سایت تماس بگیرید";
         default:
             return "یک خطای ناشناخته رخ داده است. لطفاً صفحه را بازخوانی کنید یا با تیم پشتیبانی تماس بگیرید";
     }
 });
-
 </script>
 
 <template>
-    <div class="w-full h-svh flex items-center flex-col font-iran-yekan-x overflow-x-hidden">
-
+    <div
+        class="relative flex flex-col items-center w-full overflow-x-hidden h-svh font-iran-yekan-x"
+    >
         <!-- orbs -->
         <div
             class="size-[200px] z-lowest bg-primary/80 blur-[150px] absolute top-1/2 -left-10 -translate-y-1/2"
@@ -37,8 +36,7 @@ const errorMessage = computed(() => {
             class="size-[200px] z-lowest bg-secondary/80 blur-[150px] absolute top-1/2 -right-10 -translate-y-1/2"
         ></div>
 
-        <div class="w-full flex justify-between items-center px-4 lg:px-8 py-4">
-
+        <div class="flex items-center justify-between w-full px-4 py-4 lg:px-8">
             <div>
                 <img class="size-6 lg:size-8" src="/logo.png" alt="logo" />
             </div>
@@ -49,18 +47,18 @@ const errorMessage = computed(() => {
                 >
                     خورشید رایان طلوع
                 </span>
-                <span
-                    class="py-0.5 !leading-[150%] font-semibold"
-                >
+                <span class="py-0.5 !leading-[150%] font-semibold">
                     شرکت مهندسی
                 </span>
             </div>
-
         </div>
 
-        <div class="flex justify-center h-[calc(100svh-100px)] flex-col items-center gap-4 px-4">
+        <div
+            class="flex justify-center h-[calc(100svh-100px)] flex-col items-center gap-4 px-4"
+        >
             <div
-                class="text-center text-[80px] xs:text-[100px] lg:text-[150px] leading-[80px] xs:leading-[100px] lg:leading-[150px] font-semibold lg:font-bold bg-gradient-to-t from-primary to-secondary text-gradient">
+                class="text-center text-[80px] xs:text-[100px] lg:text-[130px] leading-[80px] xs:leading-[100px] lg:leading-[150px] font-semibold lg:font-bold bg-gradient-to-t from-primary to-secondary text-gradient"
+            >
                 {{ error?.statusCode }}
             </div>
             <p
@@ -69,7 +67,7 @@ const errorMessage = computed(() => {
                 {{ errorMessage }}
             </p>
             <div
-                class="flex items-center justify-center mt-6 lg:mt-8 gap-3 lg:justify-start lg:gap-5 max-xl:mt-3"
+                class="flex items-center justify-center gap-3 mt-6 lg:mt-8 lg:justify-start lg:gap-5 max-xl:mt-3"
             >
                 <a
                     href="mailto:test@gmail.com"
@@ -86,6 +84,5 @@ const errorMessage = computed(() => {
                 </button>
             </div>
         </div>
-
     </div>
 </template>
