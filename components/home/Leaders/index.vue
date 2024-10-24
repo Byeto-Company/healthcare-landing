@@ -20,7 +20,7 @@ const { data: content } = useGetContent();
                 :key="leader.id"
                 link="#"
                 :name="leader.name"
-                :image="config.public.API_BASE_URL + '/' + leader.image"
+                :image="config.public.API_BASE_URL + leader.image"
                 :description="leader.description"
             />
         </div>
