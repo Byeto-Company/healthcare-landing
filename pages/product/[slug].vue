@@ -23,7 +23,7 @@ onServerPrefetch(async () => {
 // computed
 
 const thumbnailUrl = computed(() => {
-    return `${config.public.API_BASE_URL}/${product.value?.thumbnail}`;
+    return `${config.public.API_BASE_URL}${product.value?.thumbnail}`;
 });
 
 // meta
