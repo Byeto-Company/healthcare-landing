@@ -23,7 +23,7 @@ const { $gsap: gsap, $ScrollTrigger: ScrollTrigger } = useNuxtApp();
 // computed
 
 const imageUrl = computed(() => {
-    return `${config.public.API_BASE_URL}/${image.value}`;
+    return `${config.public.API_BASE_URL}${image.value}`;
 });
 
 // life-cycle
