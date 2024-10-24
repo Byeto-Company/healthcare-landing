@@ -86,7 +86,7 @@ const scrollTo = (link: { title: string; path: string }) => {
                                     {{ link.title }}
                                 </p>
                             </button>
-                            <NuxtLink
+                            <a
                                 v-else
                                 class="flex items-center w-full gap-3 py-3 text-right"
                                 :href="link.path"
@@ -99,7 +99,7 @@ const scrollTo = (link: { title: string; path: string }) => {
                                 >
                                     {{ link.title }}
                                 </p>
-                            </NuxtLink>
+                            </a>
                         </template>
                     </div>
                 </div>
