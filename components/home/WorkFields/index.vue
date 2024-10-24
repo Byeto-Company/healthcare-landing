@@ -9,7 +9,7 @@ const { data: content } = useGetContent();
 </script>
 
 <template>
-    <section id="work-fields-section">
+    <section id="work-fields-section" class="pt-44 lg:pt-0">
         <SectionTitle
             :title="content?.work_fields.title"
             :description="content?.work_fields.description"
