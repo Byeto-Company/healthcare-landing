@@ -23,7 +23,7 @@ const config = useRuntimeConfig();
 // computed
 
 const imageUrl = computed(() => {
-    return `${config.public.API_BASE_URL}/${image.value}`;
+    return `${config.public.API_BASE_URL}${image.value}`;
 });
 </script>
 
@@ -34,7 +34,7 @@ const imageUrl = computed(() => {
                 ? 'shadow-black/10 md:shadow-primary-200 md:-translate-y-8'
                 : 'shadow-black/10'
         "
-        class="overflow-hidden bg-white rounded-200 h-fit shadow-main"
+        class="overflow-hidden bg-white rounded-200 h-fit w-[20rem] shadow-main"
     >
         <div
             class="h-[170px] lg:h-[250px] w-full relative overflow-hidden flex justify-center items-center"
