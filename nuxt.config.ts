@@ -7,18 +7,15 @@ export default defineNuxtConfig({
     routeRules: {
         "/": {
             swr: 300,
-            prerender: true,
         },
         "/contact-us": {
             swr: 300,
         },
         "/customers": {
             swr: 300,
-            prerender: true,
         },
         "/product/**": {
             swr: 300,
-            prerender: true,
         },
     },
 
