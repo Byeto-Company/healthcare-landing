@@ -4,20 +4,20 @@ export default defineNuxtConfig({
 
     ssr: true,
 
-    // routeRules: {
-    //     "/": {
-    //         swr: 300,
-    //     },
-    //     "/contact-us": {
-    //         swr: 300,
-    //     },
-    //     "/customers": {
-    //         swr: 300,
-    //     },
-    //     "/product/**": {
-    //         swr: 300,
-    //     },
-    // },
+    routeRules: {
+        "/": {
+            swr: 300,
+        },
+        "/contact-us": {
+            swr: 300,
+        },
+        "/customers": {
+            swr: 300,
+        },
+        "/product/**": {
+            swr: 300,
+        },
+    },
 
     app: {
         head: {
