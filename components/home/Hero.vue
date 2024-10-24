@@ -16,7 +16,7 @@ const heroImages = computed(() => {
     if (content.value) {
         return content.value?.hero.images.map((item) => {
             return {
-                link: `${config.public.API_BASE_URL}/${item.link}`,
+                link: `${config.public.API_BASE_URL}${item.link}`,
                 alt: item.alt,
             };
         });
@@ -27,7 +27,7 @@ const heroImages = computed(() => {
 
 const heroLogo = computed(() => {
     return {
-        link: `${config.public.API_BASE_URL}/${content.value?.body_logo.link}`,
+        link: `${config.public.API_BASE_URL}${content.value?.body_logo.link}`,
         alt: content.value?.body_logo.link,
     };
 });
@@ -88,7 +88,7 @@ const heroLogo = computed(() => {
                     <NuxtImg
                         :src="heroImages[0]?.link"
                         :alt="heroImages[0]?.alt"
-                        class="object-fill size-full"
+                        class="object-cover size-full"
                     />
                 </div>
 
@@ -98,7 +98,7 @@ const heroLogo = computed(() => {
                     <NuxtImg
                         :src="heroImages[1]?.link"
                         :alt="heroImages[1]?.alt"
-                        class="object-fill size-full"
+                        class="object-cover size-full"
                     />
                 </div>
 
@@ -120,7 +120,7 @@ const heroLogo = computed(() => {
                     <NuxtImg
                         :src="heroImages[2]?.link"
                         :alt="heroImages[2]?.alt"
-                        class="object-fill size-full"
+                        class="object-cover size-full"
                     />
                 </div>
 
@@ -130,7 +130,7 @@ const heroLogo = computed(() => {
                     <NuxtImg
                         :src="heroImages[3]?.link"
                         :alt="heroImages[3]?.alt"
-                        class="object-fill size-full"
+                        class="object-cover size-full"
                     />
                 </div>
             </div>
