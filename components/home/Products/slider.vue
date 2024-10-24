@@ -94,15 +94,12 @@ watch(
                         .description
                 }}
             </span>
-            <NuxtLink
-                :to="{
-                    name: 'product-slug',
-                    params: { slug: activeProduct.slug },
-                }"
+            <a
+                :href="`/product/${activeProduct.slug}`"
                 class="px-4 h-[40px] rounded-md bg-primary flex items-center justify-center text-white"
             >
                 مشاهده محصول
-            </NuxtLink>
+            </a>
         </div>
         <div class="flex items-center justify-center w-full gap-5 lg:hidden">
             <button
