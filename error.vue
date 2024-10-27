@@ -45,7 +45,7 @@ const errorMessage = computed(() => {
                 <span
                     class="py-0.5 !leading-[150%] font-semibold text-gradient bg-gradient-to-r from-primary to-secondary"
                 >
-                    خورشید رایان طلوع
+                    شرکت خورشید رایانه طلوع
                 </span>
                 <span class="py-0.5 !leading-[150%] font-semibold">
                     شرکت مهندسی

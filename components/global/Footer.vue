@@ -68,7 +68,7 @@ const { data: content } = useGetContent();
                     <img src="/logo-row.png" class="w-[10rem]" alt="logo" />
                     <div class="flex flex-col gap-2">
                         <p class="text-sm text-gray-200 max-md:text-center">
-                            شرکت فنی مهندسی خورشید رایانه طلوع
+                            شرکت خورشید رایانه طلوع
                         </p>
                         <p class="text-sm text-gray-200 max-md:text-center">
                             {{ content?.footer.address }}
@@ -121,7 +121,7 @@ const { data: content } = useGetContent();
                 class="flex items-center justify-between w-full pb-6 -mt-6 max-sm:flex-col max-md:gap-6"
             >
                 <p class="text-gray-500">
-                    @2024 شرکت فنی مهندسی خورشید رایانه طلوع
+                    @2024 شرکت خورشید رایانه طلوع
                 </p>
 
                 <div class="flex items-center gap-7">

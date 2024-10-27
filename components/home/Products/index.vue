@@ -38,7 +38,7 @@ const changeActiveCategory = (id: string) => {
         <div class="container w-full max-lg:px-5 py-[150px]">
             <SectionTitle
                 theme="dark"
-                title="محصولات خورشید رایان طلوع"
+                title="محصولات خورشید رایانه طلوع"
                 description="گسترش روز به روز محصولات کار گروهی مجرب و سخت کوش است"
             />
             <Slider :activeProduct="activeProduct" :products="products" />
